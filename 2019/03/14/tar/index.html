@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Linux tar命令主要用于复制文件或目录。这个是使用频率最多的命令">
+<meta name="description" content="把常用的tar解压命令总结下，当作备忘：">
 <meta name="keywords" content="IT技术,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每天一个linux命令之 tar">
 <meta property="og:url" content="https://guhaiye.github.io/2019/03/14/tar/index.html">
 <meta property="og:site_name" content="海叶的小小园子">
-<meta property="og:description" content="Linux tar命令主要用于复制文件或目录。这个是使用频率最多的命令">
+<meta property="og:description" content="把常用的tar解压命令总结下，当作备忘：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T09:12:23.058Z">
+<meta property="og:updated_time" content="2019-03-14T09:32:59.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每天一个linux命令之 tar">
-<meta name="twitter:description" content="Linux tar命令主要用于复制文件或目录。这个是使用频率最多的命令">
+<meta name="twitter:description" content="把常用的tar解压命令总结下，当作备忘：">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -305,7 +305,67 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>tar</p>
+<p>-c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件</p>
+<p>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
+<p>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出</p>
+<p>下面的参数-f是必须的</p>
+<p>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<h1 id="tar-cf-all-tar-jpg"><a href="#tar-cf-all-tar-jpg" class="headerlink" title="tar -cf all.tar *.jpg"></a>tar -cf all.tar *.jpg</h1><p>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</p>
+<h1 id="tar-rf-all-tar-gif"><a href="#tar-rf-all-tar-gif" class="headerlink" title="tar -rf all.tar *.gif"></a>tar -rf all.tar *.gif</h1><p>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</p>
+<h1 id="tar-uf-all-tar-logo-gif"><a href="#tar-uf-all-tar-logo-gif" class="headerlink" title="tar -uf all.tar logo.gif"></a>tar -uf all.tar logo.gif</h1><p>这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</p>
+<h1 id="tar-tf-all-tar"><a href="#tar-tf-all-tar" class="headerlink" title="tar -tf all.tar"></a>tar -tf all.tar</h1><p>这条命令是列出all.tar包中所有文件，-t是列出文件的意思</p>
+<h1 id="tar-xf-all-tar"><a href="#tar-xf-all-tar" class="headerlink" title="tar -xf all.tar"></a>tar -xf all.tar</h1><p>这条命令是解出all.tar包中所有文件，-x是解开的意思</p>
+<p>压缩<br>tar –cvf jpg.tar <em>.jpg  将目录里所有jpg文件打包成tar.jpg<br>tar –czf jpg.tar.gz </em>.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz<br>tar –cjf jpg.tar.bz2 <em>.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2<br>tar –cZf jpg.tar.Z </em>.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z<br>rar a jpg.rar <em>.jpg rar格式的压缩，需要先下载rar for linux<br>zip jpg.zip </em>.jpg   zip格式的压缩，需要先下载zip for linux<br>解压<br>tar –xvf file.tar  解压 tar包<br>tar -xzvf file.tar.gz 解压tar.gz<br>tar -xjvf file.tar.bz2   解压 tar.bz2<br>tar –xZvf file.tar.Z   解压tar.Z<br>unrar e file.rar 解压rar<br>unzip file.zip 解压zip</p>
+<p>总结<br><em>.tar 用 tar –xvf 解压
+</em>.gz 用 gzip -d或者gunzip 解压<br><em>.tar.gz和</em>.tgz 用 tar –xzf 解压<br><em>.bz2 用 bzip2 -d或者用bunzip2 解压
+</em>.tar.bz2用tar –xjf 解压<br><em>.Z 用 uncompress 解压
+</em>.tar.Z 用tar –xZf 解压<br><em>.rar 用 unrar e解压
+</em>.zip 用 unzip 解压</p>
+<p>linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。</p>
+<p>1．命令格式：</p>
+<p>tar[必要参数][选择参数][文件] </p>
+<p>2．命令功能：</p>
+<p>用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的 </p>
+<p>3．命令参数：</p>
+<p>必要参数有如下：</p>
+<p>-A 新增压缩文件到已存在的压缩</p>
+<p>-B 设置区块大小</p>
+<p>-c 建立新的压缩文件</p>
+<p>-d 记录文件的差别</p>
+<p>-r 添加文件到已经压缩的文件</p>
+<p>-u 添加改变了和现有的文件到已经存在的压缩文件</p>
+<p>-x 从压缩的文件中提取文件</p>
+<p>-t 显示压缩文件的内容</p>
+<p>-z 支持gzip解压文件</p>
+<p>-j 支持bzip2解压文件</p>
+<p>-Z 支持compress解压文件</p>
+<p>-v 显示操作过程</p>
+<p>-l 文件系统边界设置</p>
+<p>-k 保留原有文件不覆盖</p>
+<p>-m 保留文件不被覆盖</p>
+<p>-W 确认压缩文件的正确性</p>
+<p>可选参数如下：</p>
+<p>-b 设置区块数目</p>
+<p>-C 切换到指定目录</p>
+<p>-f 指定压缩文件</p>
+<p>–help 显示帮助信息</p>
+<p>–version 显示版本信息</p>
+<p>4．常见解压/压缩命令</p>
+<p>tar<br>解包：tar xvf FileName.tar<br>打包：tar cvf FileName.tar DirName<br>（注：tar是打包，不是压缩！）</p>
+<p>.gz<br>解压1：gunzip FileName.gz<br>解压2：gzip -d FileName.gz<br>压缩：gzip FileName<br>.tar.gz 和 .tgz<br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf FileName.tar.gz DirName</p>
+<p>.bz2<br>解压1：bzip2 -d FileName.bz2<br>解压2：bunzip2 FileName.bz2<br>压缩： bzip2 -z FileName</p>
+<p>.tar.bz2<br>解压：tar jxvf FileName.tar.bz2<br>压缩：tar jcvf FileName.tar.bz2 DirName</p>
+<p>.bz<br>解压1：bzip2 -d FileName.bz<br>解压2：bunzip2 FileName.bz<br>压缩：未知<br>.tar.bz<br>解压：tar jxvf FileName.tar.bz<br>压缩：未知</p>
+<p>.Z<br>解压：uncompress FileName.Z<br>压缩：compress FileName<br>.tar.Z<br>解压：tar Zxvf FileName.tar.Z<br>压缩：tar Zcvf FileName.tar.Z DirName<br>.zip<br>解压：unzip FileName.zip<br>压缩：zip FileName.zip DirName</p>
+<p>.rar<br>解压：rar x FileName.rar<br>压缩：rar a FileName.rar DirName </p>
+<p>5．使用实例</p>
+<p>实例1：将文件全部打包成tar包</p>
+<p>命令：</p>
+<p>tar -cvf log.tar log2012.log</p>
+<p>tar -zcvf log.tar.gz log2012.log</p>
+<p>tar -jcvf log.tar.bz2 log2012.log</p>
+
       
     </div>
     
@@ -316,7 +376,7 @@
         <p><span>本文标题:</span><a href="/2019/03/14/tar/">每天一个linux命令之 tar</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
         <p><span>发布时间:</span>2019-03-14, 17:11:34</p>
-        <p><span>最后更新:</span>2019-03-14, 17:12:23</p>
+        <p><span>最后更新:</span>2019-03-14, 17:32:59</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/03/14/tar/" title="每天一个linux命令之 tar">https://guhaiye.github.io/2019/03/14/tar/</a>
             <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/03/14/tar/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -346,7 +406,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tar-cf-all-tar-jpg"><span class="toc-number">1.</span> <span class="toc-text">tar -cf all.tar *.jpg</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tar-rf-all-tar-gif"><span class="toc-number">2.</span> <span class="toc-text">tar -rf all.tar *.gif</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tar-uf-all-tar-logo-gif"><span class="toc-number">3.</span> <span class="toc-text">tar -uf all.tar logo.gif</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tar-tf-all-tar"><span class="toc-number">4.</span> <span class="toc-text">tar -tf all.tar</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tar-xf-all-tar"><span class="toc-number">5.</span> <span class="toc-text">tar -xf all.tar</span></a></li></ol>
         
     </div>
     <style>
