@@ -19,23 +19,23 @@
 <meta name="keywords" content="IT技术,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每天一个linux命令之  cp">
-<meta property="og:url" content="http://localhost:4000/2019/03/14/cp/index.html">
+<meta property="og:url" content="https://guhaiye.github.io/2019/03/14/cp/index.html">
 <meta property="og:site_name" content="海叶的小小园子">
 <meta property="og:description" content="Linux cp命令主要用于复制文件或目录。这个是使用频率最多的命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/1.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/2.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/3.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/4.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/5.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/6.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/7.png">
-<meta property="og:image" content="http://localhost:4000/2019/03/14/cp/8.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/1.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/2.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/3.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/4.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/5.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/6.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/7.png">
+<meta property="og:image" content="https://guhaiye.github.io/2019/03/14/cp/8.png">
 <meta property="og:updated_time" content="2019-03-15T02:37:38.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每天一个linux命令之  cp">
 <meta name="twitter:description" content="Linux cp命令主要用于复制文件或目录。这个是使用频率最多的命令">
-<meta name="twitter:image" content="http://localhost:4000/2019/03/14/cp/1.png">
+<meta name="twitter:image" content="https://guhaiye.github.io/2019/03/14/cp/1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -322,34 +322,34 @@
 <pre><code>命令格式为：cp 源文件 目标文件（夹）
 
 这个是使用频率最多的命令，负责把一个源文件复制到目标文件（夹）下。如下图所示，复制到文件夹下，则文件名保持不变，复制到文件中，则文件名变更。如果目标文件已经存在或目标文件夹中含有同名文件，则复制之后目标文件或目标文件夹中的同名文件会被覆盖。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/1.png" alt="这里输入图片描述"></p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/1.png" alt="这里输入图片描述"></p>
 <p>二、同时复制多个文件到目标文件（夹）下。</p>
 <pre><code>命令格式为：cp 源文件1 源文件2 目标文件夹 或 cp 文件* 目标文件夹
 
 这个命令使用频率也很高。第一种命令格式可以把列出来的多个文件一次性复制到目标文件夹下，每个文件直接用空格分隔；第二种命令格式使用了通配符*，如下图所示，可以将所有以“.txt”结尾的文件都复制到文件夹testDir下。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/2.png" alt="这里输入图片描述"><br><img src="//localhost:4000/2019/03/14/cp/3.png" alt="这里输入图片描述"> </p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/2.png" alt="这里输入图片描述"><br><img src="//guhaiye.github.io/2019/03/14/cp/3.png" alt="这里输入图片描述"> </p>
 <p>三、复制源文件夹到目标文件夹下。</p>
 <pre><code>命令格式为：cp -r 源文件夹 目标文件夹
 
 这个也是使用频率很高的命令，只需要记住复制文件夹一定要加“-r”参数，否则会出现“cp: omitting directory”错误。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/4.png" alt="这里输入图片描述">    </p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/4.png" alt="这里输入图片描述">    </p>
 <p>四、只有源文件较目标文件新时复制。</p>
 <pre><code>命令格式为：cp -u 源文件 目标文件
 
 这个命令很实用，尤其是在更新文件时。如下图所示，只有源文件比目标文件新时，才会将源文件复制给目标文件，否则，及时执行了命令，也不会执行复制。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/5.png" alt="这里输入图片描述">       </p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/5.png" alt="这里输入图片描述">       </p>
 <p>五、创建文件的软链接。</p>
 <pre><code>命令格式为：cp -s 源文件 目标文件
 
 也可以用ln命令实现同样的功能。当一个文件路径太深（如下述的a/b/c/d/e/orginalFile.txt），访问起来十分不方便时，就会创建这个文件的软链接，使之访问起来更方便些。软链接就相当于windows上的快捷方式。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/6.png" alt="这里输入图片描述">       </p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/6.png" alt="这里输入图片描述">       </p>
 <p>六、创建文件的硬链接。</p>
 <pre><code>命令格式为：cp -l 源文件 目标文件
 
 也可以用ln命令实现同样的功能。有时候，为了某种原因，需要创建一个硬链接，如下图所示。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/7.png" alt="这里输入图片描述"></p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/7.png" alt="这里输入图片描述"></p>
 <pre><code>这里简单介绍下硬链接和软链接的区别。如下图所示，软连接文件（softLink.txt）和被链接文件（orginalFile.txt）所拥有的inode不相同（133827和139819），硬链接文件（hardLink.txt）和被链接的文件（orginalFile22.txt）拥有相同的inode（156981）。当被链接的文件删除时，软链接文件也无法访问了，而硬链接文件仍能正常访问。
-</code></pre><p><img src="//localhost:4000/2019/03/14/cp/8.png" alt="这里输入图片描述">        </p>
+</code></pre><p><img src="//guhaiye.github.io/2019/03/14/cp/8.png" alt="这里输入图片描述">        </p>
 
       
     </div>
@@ -363,8 +363,8 @@
         <p><span>发布时间:</span>2019-03-14, 15:08:57</p>
         <p><span>最后更新:</span>2019-03-15, 10:37:38</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/03/14/cp/" title="每天一个linux命令之  cp">http://localhost:4000/2019/03/14/cp/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://localhost:4000/2019/03/14/cp/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/14/cp/" title="每天一个linux命令之  cp">https://guhaiye.github.io/2019/03/14/cp/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/03/14/cp/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
