@@ -28,7 +28,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[blogtheme]]></title>
+    <title><![CDATA[安装好自己的博客，想要更改主题]]></title>
     <url>%2F2019%2F03%2F13%2Fblogtheme%2F</url>
     <content type="text"><![CDATA[1、从git上下载yelee主题放到themes文件夹下 git clone git@github.com:MOxFIVE/hexo-theme-yelee.git themes/yelee 2、更改blog文件夹下的_config.yml文件 将theme改成yelee 3、然后执行 hexo s 可以到网站上查看是否完成 ps：网站再次进行部署时，还需要清理public文件夹内容，重新生成部署，用以下命令。 hexo clean #尤其在更换主题后使用 hexo g hexo d]]></content>
       <tags>
