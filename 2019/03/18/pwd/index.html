@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="安装完成后，想更改一个好看一点的主题  https://hexo.io/themes/  从这个主题网站上选择自己喜欢的主题">
+<meta name="description" content="Linux 执行pwd指令可立刻得知您目前所在的工作目录的绝对路径名称。">
 <meta name="keywords" content="IT技术,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装好自己的博客，想要更改主题">
-<meta property="og:url" content="https://guhaiye.github.io/2019/03/13/blogtheme/index.html">
+<meta property="og:title" content="pwd">
+<meta property="og:url" content="https://guhaiye.github.io/2019/03/18/pwd/index.html">
 <meta property="og:site_name" content="海叶的小小园子">
-<meta property="og:description" content="安装完成后，想更改一个好看一点的主题  https://hexo.io/themes/  从这个主题网站上选择自己喜欢的主题">
+<meta property="og:description" content="Linux 执行pwd指令可立刻得知您目前所在的工作目录的绝对路径名称。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-15T09:25:14.257Z">
+<meta property="og:updated_time" content="2019-03-18T02:07:13.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装好自己的博客，想要更改主题">
-<meta name="twitter:description" content="安装完成后，想更改一个好看一点的主题  https://hexo.io/themes/  从这个主题网站上选择自己喜欢的主题">
+<meta name="twitter:title" content="pwd">
+<meta name="twitter:description" content="Linux 执行pwd指令可立刻得知您目前所在的工作目录的绝对路径名称。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>安装好自己的博客，想要更改主题 | 海叶的小小园子</title>
+<title>pwd | 海叶的小小园子</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +269,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-blogtheme" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-pwd" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/03/13/blogtheme/" class="article-date">
-      <time datetime="2019-03-13T09:17:44.000Z" itemprop="datePublished">2019-03-13</time>
+      <a href="/2019/03/18/pwd/" class="article-date">
+      <time datetime="2019-03-18T01:37:14.000Z" itemprop="datePublished">2019-03-18</time>
 </a>
 
 
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      安装好自己的博客，想要更改主题
+      pwd
     </h1>
   
 
@@ -309,12 +309,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、从git上下载yelee主题放到themes文件夹下</p>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:MOxFIVE/hexo-theme-yelee.git themes/yelee</p>
-<p>2、更改blog文件夹下的_config.yml文件</p>
-<p>将theme改成yelee</p>
-<p>3、然后执行 hexo  s  可以到网站上查看是否完成</p>
-<p>ps：网站再次进行部署时，还需要清理public文件夹内容，重新生成部署，用以下命令。<br>    hexo clean  #尤其在更换主题后使用<br>    hexo g<br>    hexo d</p>
+        <p>一、Linux pwd命令语法</p>
+<p>   pwd [OPTION]…</p>
+<p>   参数说明:</p>
+<p>   -L, –logical    #use PWD from environment, even if it contains symlinks</p>
+<p>   -P, –physical    #avoid all symlinks</p>
+<p>   –help         #display this help and exit</p>
+<p>   –version       #output version information and exit</p>
+<p>   -L 目录连接链接时，输出连接路径</p>
+<p>   -P 输出物理路径</p>
+<p>二、Linux pwd命令实例</p>
+<p>   查看当前所在目录：</p>
+<p>   查看链接路径</p>
+<p>   写到环境变量中</p>
+<p>   export PS1=’[\u@$PWD]\$’</p>
+<p>   这样在命令提示符前方会显示出当前的目录</p>
+<p>   [root@/root/linuxdaxue.com/testDir]#</p>
+<p>   ok，有关Linux pwd命令的相关内容就先给大家介绍到这里。</p>
 
       
     </div>
@@ -323,13 +334,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/03/13/blogtheme/">安装好自己的博客，想要更改主题</a></p>
+        <p><span>本文标题:</span><a href="/2019/03/18/pwd/">pwd</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
-        <p><span>发布时间:</span>2019-03-13, 17:17:44</p>
-        <p><span>最后更新:</span>2019-03-15, 17:25:14</p>
+        <p><span>发布时间:</span>2019-03-18, 09:37:14</p>
+        <p><span>最后更新:</span>2019-03-18, 10:07:13</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/03/13/blogtheme/" title="安装好自己的博客，想要更改主题">https://guhaiye.github.io/2019/03/13/blogtheme/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/03/13/blogtheme/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/18/pwd/" title="pwd">https://guhaiye.github.io/2019/03/18/pwd/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/03/18/pwd/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -341,16 +352,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/03/14/cp/">
-                    每天一个linux命令之  cp
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/03/12/myfirstblog/">
-                    使用Hexo+Github一步步搭建属于自己的博客（基础）
+                <a href="/2019/03/15/mv/">
+                    每天一个linux命令之 mv
                 </a>
             </div>
         
@@ -398,7 +403,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"安装好自己的博客，想要更改主题　| 海叶的小小园子　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"pwd　| 海叶的小小园子　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -418,15 +423,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/03/14/cp/" title="上一篇: 每天一个linux命令之  cp">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/03/12/myfirstblog/" title="下一篇: 使用Hexo+Github一步步搭建属于自己的博客（基础）">
+            <a href="/2019/03/15/mv/" title="下一篇: 每天一个linux命令之 mv">
                 <i class="fa fa-angle-right"></i>
             </a>
         
