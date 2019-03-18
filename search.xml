@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[pwd]]></title>
+    <title><![CDATA[每天一个linux命令之 pwd]]></title>
     <url>%2F2019%2F03%2F18%2Fpwd%2F</url>
     <content type="text"><![CDATA[一、Linux pwd命令语法 pwd [OPTION]… 参数说明: -L, –logical #use PWD from environment, even if it contains symlinks -P, –physical #avoid all symlinks –help #display this help and exit –version #output version information and exit -L 目录连接链接时，输出连接路径 -P 输出物理路径 二、Linux pwd命令实例 查看当前所在目录： 查看链接路径 写到环境变量中 export PS1=’[\u@$PWD]\$’ 这样在命令提示符前方会显示出当前的目录 [root@/root/linuxdaxue.com/testDir]# ok，有关Linux pwd命令的相关内容就先给大家介绍到这里。]]></content>
       <tags>
