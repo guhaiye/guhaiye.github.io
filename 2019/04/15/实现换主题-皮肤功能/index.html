@@ -15,13 +15,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="海叶的小小园子">
-<meta property="og:url" content="https://guhaiye.github.io/archives/index.html">
+<meta name="description" content="实现换主题/皮肤功能">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue 实现换主题&#x2F;皮肤功能">
+<meta property="og:url" content="https://guhaiye.github.io/2019/04/15/实现换主题-皮肤功能/index.html">
 <meta property="og:site_name" content="海叶的小小园子">
+<meta property="og:description" content="实现换主题/皮肤功能">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-15T05:43:07.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="海叶的小小园子">
+<meta name="twitter:title" content="vue 实现换主题&#x2F;皮肤功能">
+<meta name="twitter:description" content="实现换主题/皮肤功能">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -53,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives | 海叶的小小园子</title>
+<title>vue 实现换主题/皮肤功能 | 海叶的小小园子</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -63,8 +68,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -264,320 +269,254 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-实现换主题-皮肤功能" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2019/04/15/实现换主题-皮肤功能/" class="article-date">
+      <time datetime="2019-04-15T05:15:30.000Z" itemprop="datePublished">2019-04-15</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue 实现换主题/皮肤功能
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/04/15/实现换主题-皮肤功能/" class="archive-article-date">
-      <time datetime="2019-04-15T05:15:30.000Z" itemprop="datePublished">04-15</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/15/实现换主题-皮肤功能/">vue 实现换主题/皮肤功能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <p>1、实现思路</p>
+<p>我们用vue一般都是写单页面程序，因此在实际发布的时候只有一个html以及一堆静态文件（js、css、img之类）。而在html中引用了这些js和css。我们要换皮肤的话其实就是动态的去切换css，所以在这里实现换皮肤其实也就是动态的更改html中引用css的路径，使得当用户选择了不同的皮肤，页面引用的css不同从而呈现的样式也不一样。</p>
+<p>2、优化策略</p>
+<p>其实在实际场景中，需要通过切换皮肤来改变css的元素占所有css的比重并不会很多，因此我们需要把需要通过切换改变的css单独提取出来，在动态改变css路径时只需要去改变这个控制皮肤的css就可以了。</p>
+<p>把皮肤相关的css压缩。</p>
+<p>3、实现代码分析</p>
+<p>如下是我们的html代码，注意其中的<link rel="stylesheet" name="theme" href>，其他的都是正常引用。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+   &lt;title&gt;iView admin&lt;/title&gt;
+   &lt;meta charset=&quot;UTF-8&quot;&gt;
+   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0&quot;&gt;
+   &lt;!-- 注意这是我们换皮肤需要的css --&gt;
+   &lt;link rel=&quot;stylesheet&quot; name=&quot;theme&quot; href=&quot;&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>接下来就是具体实现换皮肤功能了，换皮肤一般都是点击一个按钮弹出一些皮肤的选项，选中选项后皮肤生效。</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;app-settings d-none d-md-block&quot;&gt;
+    &lt;button class=&quot;btn&quot; @click=&quot;toggle&quot;&gt;&lt;i class=&quot;fa fa-gear fa-spin&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class=&quot;py-2 bb-l&quot;&gt;主题设置&lt;/div&gt;
+    &lt;div class=&quot;row no-gutters px-2 mt-2 mb-2 theme-switcher&quot;&gt;
+      &lt;div class=&quot;col-6 px-1&quot;&gt;
+        &lt;label class=&quot;bg-themeblue&quot; :class=&quot;{&apos;active&apos;: theme == &apos;blue&apos;}&quot; title=&quot;Blue&quot; @click=&quot;active&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-6 px-1 mb-1&quot;&gt;
+        &lt;label class=&quot;bg-themelightblue&quot; :class=&quot;{&apos;active&apos;: theme == &apos;lightblue&apos;}&quot; title=&quot;Lightblue&quot; @click=&quot;active&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-6 px-1&quot;&gt;
+        &lt;label class=&quot;bg-themedarkblue&quot; :class=&quot;{&apos;active&apos;: theme == &apos;darkblue&apos;}&quot; title=&quot;Darkblue&quot; @click=&quot;active&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-6 px-1&quot;&gt;
+        &lt;label class=&quot;bg-themelightpurple&quot; :class=&quot;{&apos;active&apos;: theme == &apos;lightpurple&apos;}&quot; title=&quot;LightPurple&quot; @click=&quot;active&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  name: &apos;appSettings&apos;,
+  data: () =&gt; ({
+    layout: [&apos;header-fixed&apos;],
+    theme: localStorage.theme || &apos;blue&apos;
+  }),
+  created () {
+    // 非默认主题, 则进行切换
+    if (this.theme) {
+      document.getElementById(&apos;app-theme&apos;).setAttribute(&apos;href&apos;, `/static/css/newtheme-${this.theme}.css`)
+    } else {
+      document.getElementById(&apos;app-theme&apos;).removeAttribute(&apos;href&apos;)
+    }
+  },
+  methods: {
+    // 切换主题颜色
+    active (e, theme) {
+      // 获取选中主题, 优先使用参数传递的主题
+      if(e.target.title != &apos;&apos;){
+          if(e.target.title.toLowerCase() != this.theme.toLowerCase()){
+            theme = theme || e.target.title.toLowerCase()
+            // 更改样式链接
+            document.getElementById(&apos;app-theme&apos;).setAttribute(&apos;href&apos;, `/static/css/newtheme-${theme}.css`)
+            // 保存
+            localStorage.setItem(&apos;theme&apos;, theme)
+            this.theme = theme;
+            // var ofrm1 = document.getElementById(&quot;iframeid&quot;).contentWindow.document;
+            this.changeOriginTheme()
+          }
+      }
+    },
+    changeOriginTheme(){
+      var that = this;
+      let mapFrame = $(&quot;#iframeid&quot;);
+      if(mapFrame.length &gt; 0){
+        let iframeWin = mapFrame[0].contentWindow;
+        iframeWin.postMessage({
+          &apos;themecolor&apos;: that.theme
+        },&apos;*&apos;)
+      }
+    },
+
+    toggle () {
+      this.$el.classList.toggle(&apos;show&apos;)
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/04/15/实现换主题-皮肤功能/">vue 实现换主题/皮肤功能</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
+        <p><span>发布时间:</span>2019-04-15, 13:15:30</p>
+        <p><span>最后更新:</span>2019-04-15, 13:43:07</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/15/实现换主题-皮肤功能/" title="vue 实现换主题/皮肤功能">https://guhaiye.github.io/2019/04/15/实现换主题-皮肤功能/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/04/15/实现换主题-皮肤功能/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/03/23/跨域iframe通信/">
+                    跨域iframe通信
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/23/跨域iframe通信/" class="archive-article-date">
-      <time datetime="2019-03-23T09:31:53.000Z" itemprop="datePublished">03-23</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/23/跨域iframe通信/">跨域iframe通信</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"vue 实现换主题/皮肤功能　| 海叶的小小园子　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
+    
+</div>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/03/23/跨域iframe通信/" title="下一篇: 跨域iframe通信">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/19/‘用户和用户组/" class="archive-article-date">
-      <time datetime="2019-03-19T02:52:24.000Z" itemprop="datePublished">03-19</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/04/15/实现换主题-皮肤功能/">vue 实现换主题/皮肤功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/23/跨域iframe通信/">跨域iframe通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/‘用户和用户组/">用户和用户组</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/pwd/">每天一个linux命令之 pwd</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/mv/">每天一个linux命令之 mv</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/tar/">每天一个linux命令之 tar</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/cp/">每天一个linux命令之  cp</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/13/blogtheme/">安装好自己的博客，想要更改主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/myfirstblog/">使用Hexo+Github一步步搭建属于自己的博客（基础）</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/19/‘用户和用户组/">用户和用户组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/18/pwd/" class="archive-article-date">
-      <time datetime="2019-03-18T01:37:14.000Z" itemprop="datePublished">03-18</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/pwd/">每天一个linux命令之 pwd</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/15/mv/" class="archive-article-date">
-      <time datetime="2019-03-15T06:23:40.000Z" itemprop="datePublished">03-15</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/15/mv/">每天一个linux命令之 mv</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/14/tar/" class="archive-article-date">
-      <time datetime="2019-03-14T09:11:34.000Z" itemprop="datePublished">03-14</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/14/tar/">每天一个linux命令之 tar</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/14/cp/" class="archive-article-date">
-      <time datetime="2019-03-14T07:08:57.000Z" itemprop="datePublished">03-14</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/14/cp/">每天一个linux命令之  cp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/13/blogtheme/" class="archive-article-date">
-      <time datetime="2019-03-13T09:17:44.000Z" itemprop="datePublished">03-13</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/13/blogtheme/">安装好自己的博客，想要更改主题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/03/12/myfirstblog/" class="archive-article-date">
-      <time datetime="2019-03-12T08:49:08.000Z" itemprop="datePublished">03-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/myfirstblog/">使用Hexo+Github一步步搭建属于自己的博客（基础）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
