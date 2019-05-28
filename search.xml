@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[iview 分页全选反选的实现思路']]></title>
+    <title><![CDATA[iview 分页全选反选的实现思路]]></title>
     <url>%2F2019%2F05%2F28%2F%E5%88%86%E9%A1%B5%E5%85%A8%E9%80%89%E5%8F%8D%E9%80%89%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%2F</url>
     <content type="text"><![CDATA[一、首先定义一个type来确定是初始化表格还是搜索表格 1、在初始化的时候定义一个数组来接受一个初始化选中的id this.initialchoice = [] 2、在表格里面修改数据的时候，分四种：第一、是选中，第二、是反选，不选中，第三、全选中当前表格，第四、反选当前表格 第一种：直接在数组中push进去， this.initialchoice.push(id) @on-select 第二种：反选，查找当前id在初始化数组中的位置，直接删除 @on-select-cancel 第三种：全选当前表格：将当前表格的id，push到初始化数组当中，最后去重 @on-select-all 第四种：反选当前表格：将当前表格的id和初始化数组进行循环对比，如果值相同直接splice掉就可以 @on-select-all-cancel]]></content>
       <tags>
