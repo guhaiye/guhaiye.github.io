@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nginx502]]></title>
+    <url>%2F2019%2F07%2F30%2Fnginx502%2F</url>
+    <content type="text"><![CDATA[nginx 报错 502 这真是一个让人很恶心的bug，从网上搜索出各种各样这种bug的解决方案，众说纷纭 https://www.jb51.net/article/141404.htm 在测试上，预生产和生产上都配置了前后端相同的代码，连nginx的配置都一样，然而在测试和预生产上没有问题，在生产上却报502错误，搞了一晚上，最后都没有解决，没有办法，回退代码第二天将生产上的配置文件的名字原来是auth-fp.conf改为 prd-auth-fp.conf竟然好了，谁会想到是nginx配置文件的名字的问题，关键是http没有问题，https却有问题，这难道就是因为https对auth这个词有什么判断，也没法解释 结论就是不要用auth等关键词做配置文件的名字]]></content>
+      <tags>
+        <tag>IT技术</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js判断页面是首次被加载还是刷新]]></title>
     <url>%2F2019%2F05%2F28%2Fjs%E5%88%A4%E6%96%AD%E9%A1%B5%E9%9D%A2%E6%98%AF%E9%A6%96%E6%AC%A1%E8%A2%AB%E5%8A%A0%E8%BD%BD%E8%BF%98%E6%98%AF%E5%88%B7%E6%96%B0%2F</url>
     <content type="text"><![CDATA[1、利用weindow.name属性在页面刷新时不会重置判断（在该属性空置的情况下可使用） if(window.name == ‘’){ console.log(‘首次被加载’) window.name = ‘isReload’ }else if(window.name == ‘isReload’){ console.log(‘页面被刷新’) } 2、使用sessionStorage或cookie来判断 与window.name实现方法类似，在首次加载时设置一个固定值，之后判断即可 if(sessionStorage.getItem(‘isReload’)){ console.log(‘页面被刷新’) }else{ console.log(‘首次被加载’) sessionStorage.setItem(‘isReload’,true) }3、可以使用window.chrome对象 if (window.performance.navigation.type == 1) { console.log(“页面被刷新”) }else{ console.log(“首次被加载”) }]]></content>
