@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="guhaiye">
+
+
+
+<meta name="description" content="前端开发应知网站">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发应知网站">
+<meta property="og:url" content="https://guhaiye.github.io/2019/08/26/前端开发应知网站/index.html">
+<meta property="og:site_name" content="海叶的小小园子">
+<meta property="og:description" content="前端开发应知网站">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-26T10:14:56.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端开发应知网站">
+<meta name="twitter:description" content="前端开发应知网站">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="海叶的小小园子" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>前端开发应知网站 | 海叶的小小园子</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true,
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">guhaiye</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">微笑面对生活里面的坑坑洼洼</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:799677429@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="https://weibo.com/u/2734861804/home?wvr=5" title="新浪微博"></a>
+                            
+                                <a class="fa 博客园" href="https://www.cnblogs.com/guhaiye/" title="博客园"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">guhaiye</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">guhaiye</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">微笑面对生活里面的坑坑洼洼</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:799677429@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="https://weibo.com/u/2734861804/home?wvr=5" title="新浪微博"></a>
+                            
+                                <a class="fa 博客园" target="_blank" href="https://www.cnblogs.com/guhaiye/" title="博客园"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-前端开发应知网站" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/26/前端开发应知网站/" class="article-date">
+      <time datetime="2019-08-26T08:15:55.000Z" itemprop="datePublished">2019-08-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端开发应知网站
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>作为一名前端开发者（所有程序员）最起码遇到bug就算不会解决也应该会搜解决问题的答案。</p>
+<p>1、一般笔者会先在百度搜（关键词一定要输入正确）<br>2、如果没搜到会再去bing里面看看<br>3、还没有的话就去github的Issues里面再看看<br>4、如果还不行就只能自己去看官方文档然后自己研究了。</p>
+<p>下面一些链接是一些经常可以用到的网站，以此分享给大家<br>1、MDN开发者文档：<a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/</a><br>2、菜鸟教程：<a href="https://www.runoob.com/" target="_blank" rel="noopener">https://www.runoob.com/</a><br>3、W3CSchool：<a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">http://www.w3school.com.cn/</a><br>4、JavaScript教程网：<a href="https://zh.javascript.info/" target="_blank" rel="noopener">https://zh.javascript.info/</a><br>5、一行代码搞定bug监控：<a href="https://www.fundebug.com/?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">https://www.fundebug.com/?tdsourcetag=s_pcqq_aiomsg</a><br>6、web开发人员必备工具包（实现快速敲代码）:<a href="https://docs.emmet.io/" target="_blank" rel="noopener">https://docs.emmet.io/</a><br>7、让代码提交的时候先执行一次代码，如果有报错不让提交：<a href="http://www.npmjs.com/package/eslint-config-airbnb" target="_blank" rel="noopener">www.npmjs.com/package/eslint-config-airbnb</a><br>8、阿里巴巴图标库：<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a><br>9、UI颜色布料：<a href="https://www.materialui.co/colors" target="_blank" rel="noopener">https://www.materialui.co/colors</a><br>10、UI必备颜色表（色块+色码）:<a href="https://blog.csdn.net/weixin_43606158/article/details/97569176" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/97569176</a><br>11、logo在线制作，有很多：<a href="http://www.logofree.cn/" target="_blank" rel="noopener">http://www.logofree.cn/</a><br>12、在线开发工具：<a href="https://tool.lu/c/developer" target="_blank" rel="noopener">https://tool.lu/c/developer</a><br>13、项目部署流程：<a href="https://cloud.tencent.com/developer/information/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%AD%A5%E9%AA%A4" target="_blank" rel="noopener">https://cloud.tencent.com/developer/information/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%AD%A5%E9%AA%A4</a><br>12、谷歌浏览器插件下载地址： <a href="http://chromecj.com/" target="_blank" rel="noopener">http://chromecj.com/</a><br>13、网站SEO： <a href="http://www.jj3721.com/" target="_blank" rel="noopener">http://www.jj3721.com/</a><br>14、前端开发必备JS功能函数总结（上）：<a href="https://blog.csdn.net/weixin_43606158/article/details/94590474" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/94590474</a><br>15、前端开发必备JS功能函数总结（下）：<a href="https://blog.csdn.net/weixin_43606158/article/details/94660402" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/94660402</a><br>16、渐进式web应用程序核对表：<a href="https://developers.google.cn/web/progressive-web-apps/checklist" target="_blank" rel="noopener">https://developers.google.cn/web/progressive-web-apps/checklist</a><br>17、在线存放图片的地址：<a href="https://sm.ms/" target="_blank" rel="noopener">https://sm.ms/</a><br>18、代码变漂亮图片：<a href="https://carbon.now.sh" target="_blank" rel="noopener">https://carbon.now.sh</a><br>19、MintUI：<a href="https://mint-ui.github.io/#!/zh-cn" target="_blank" rel="noopener">https://mint-ui.github.io/#!/zh-cn</a><br>20、ElementUI：<a href="https://element.eleme.cn/#/zh-CN" target="_blank" rel="noopener">https://element.eleme.cn/#/zh-CN</a><br>21、iViewUI：<a href="https://www.iviewui.com/" target="_blank" rel="noopener">https://www.iviewui.com/</a><br>22、Layui：<a href="https://www.layui.com/" target="_blank" rel="noopener">https://www.layui.com/</a><br>23、cubeUI：<a href="https://didi.github.io/cube-ui/#/zh-CN" target="_blank" rel="noopener">https://didi.github.io/cube-ui/#/zh-CN</a><br>24、Antd：<a href="https://ant.design/index-cn" target="_blank" rel="noopener">https://ant.design/index-cn</a><br>25、MUI：<a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="noopener">http://dev.dcloud.net.cn/mui/</a><br>26、Animate.CSS:<a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">https://daneden.github.io/animate.css/</a><br>27、ECharts：<a href="https://www.echartsjs.com/index.html" target="_blank" rel="noopener">https://www.echartsjs.com/index.html</a><br>28、HighCharts：<a href="https://www.highcharts.com.cn/" target="_blank" rel="noopener">https://www.highcharts.com.cn/</a><br>29、富文本编辑器wangEditor： <a href="http://www.wangeditor.com/" target="_blank" rel="noopener">http://www.wangeditor.com/</a><br>30、富文本编辑器UEditor： <a href="https://ueditor.baidu.com/website/onlinedemo.html" target="_blank" rel="noopener">https://ueditor.baidu.com/website/onlinedemo.html</a><br>31、蚂蚁数据可视化：<a href="http://antv.alipay.com/zh-cn/index.html" target="_blank" rel="noopener">http://antv.alipay.com/zh-cn/index.html</a><br>32、热力图插件：<a href="https://www.patrick-wied.at/static/heatmapjs/" target="_blank" rel="noopener">https://www.patrick-wied.at/static/heatmapjs/</a><br>33、视频监控直播的插件VLC：<a href="https://www.videolan.org/" target="_blank" rel="noopener">https://www.videolan.org/</a><br>34、聊天开放软件：<a href="https://www.oschina.net/p/keybase" target="_blank" rel="noopener">https://www.oschina.net/p/keybase</a><br>35、有道翻译API：<a href="http://fanyi.youdao.com/openapi?path=data-mode" target="_blank" rel="noopener">http://fanyi.youdao.com/openapi?path=data-mode</a><br>36、力扣JS题库：<a href="https://leetcode-cn.com/" target="_blank" rel="noopener">https://leetcode-cn.com/</a><br>37、ES6入门（阮一峰大佬的）：<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">http://es6.ruanyifeng.com/</a><br>38、babel（将ES6代码转为ES5代码）：<a href="https://babeljs.io/" target="_blank" rel="noopener">https://babeljs.io/</a><br>39、处理时间与日期的JS库：<a href="http://momentjs.cn/" target="_blank" rel="noopener">http://momentjs.cn/</a><br>40、Lodash：<a href="https://www.lodashjs.com/" target="_blank" rel="noopener">https://www.lodashjs.com/</a><br>41、你可能不需要jQuery：<a href="http://youmightnotneedjquery.com/" target="_blank" rel="noopener">http://youmightnotneedjquery.com/</a><br>42、云小蜜智能机器人API：<a href="https://help.aliyun.com/product/59495.html?spm=a2c4g.11186623.3.1.7dad1b005dRM5F" target="_blank" rel="noopener">https://help.aliyun.com/product/59495.html?spm=a2c4g.11186623.3.1.7dad1b005dRM5F</a><br>43、易万维源接口：<a href="https://www.showapi.com/api/apiList" target="_blank" rel="noopener">https://www.showapi.com/api/apiList</a><br>44、短信验证码接口：<a href="https://www.mysubmail.com/sms/api?tag=jq22" target="_blank" rel="noopener">https://www.mysubmail.com/sms/api?tag=jq22</a><br>45、榛子短信验证码接口： <a href="http://smsow.zhenzikj.com/" target="_blank" rel="noopener">http://smsow.zhenzikj.com/</a><br>46、草料二维码生成器：<a href="https://cli.im/" target="_blank" rel="noopener">https://cli.im/</a></p>
+<p>47、RAP2假数据接口：<a href="http://rap2.taobao.org/" target="_blank" rel="noopener">http://rap2.taobao.org/</a><br>48、可扒的真实电商数据：<a href="http://www.xiongmaoyouxuan.com/#/" target="_blank" rel="noopener">http://www.xiongmaoyouxuan.com/#/</a><br>49、易文档接口：<a href="https://easydoc.xyz" target="_blank" rel="noopener">https://easydoc.xyz</a> - - 感谢旅行呱大佬帮助我们丰富资源，他的CSDN主页为：<a href="https://me.csdn.net/atsoar" target="_blank" rel="noopener">https://me.csdn.net/atsoar</a><br>50、免费接口：<a href="http://www.bejson.com/knownjson/webInterface/" target="_blank" rel="noopener">http://www.bejson.com/knownjson/webInterface/</a><br>51、假数据接口（测试用）：<a href="http://jsonplaceholder.typicode.com/" target="_blank" rel="noopener">http://jsonplaceholder.typicode.com/</a><br>52、上传文件转进制的formData: <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/FormData</a><br>53、jQuery插件库：<a href="http://www.jq22.com/search" target="_blank" rel="noopener">http://www.jq22.com/search</a><br>54、轮播图插件：<a href="https://www.swiper.com.cn/" target="_blank" rel="noopener">https://www.swiper.com.cn/</a><br>55、放大镜插件：<a href="http://www.elevateweb.co.uk/image-zoom/examples" target="_blank" rel="noopener">http://www.elevateweb.co.uk/image-zoom/examples</a><br>56、响应式瀑布流插件：<a href="http://www.jq22.com/jquery-info20261" target="_blank" rel="noopener">http://www.jq22.com/jquery-info20261</a><br>57、小表情的emoji：<a href="https://emojipedia.org/" target="_blank" rel="noopener">https://emojipedia.org/</a><br>58、Postman测试前端请求后端接口：<a href="https://www.getpostman.com/" target="_blank" rel="noopener">https://www.getpostman.com/</a><br>59、coding代码托管平台：<a href="https://coding.net/" target="_blank" rel="noopener">https://coding.net/</a><br>60、码云代码托管平台：<a href="https://gitee.com/" target="_blank" rel="noopener">https://gitee.com/</a><br>61、github代码托管平台：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>62、SVN代码托管平台：<a href="https://svnbucket.com/?ADTAG=bdss#/" target="_blank" rel="noopener">https://svnbucket.com/?ADTAG=bdss#/</a><br>63、SVN代码托管中心：<a href="http://www.svnchina.com/" target="_blank" rel="noopener">http://www.svnchina.com/</a><br>64、禅道：<a href="https://www.zentao.net/" target="_blank" rel="noopener">https://www.zentao.net/</a><br>65、蓝湖（ps切图）：<a href="https://lanhuapp.com/" target="_blank" rel="noopener">https://lanhuapp.com/</a><br>66、git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>67、npm官网：<a href="https://www.npmjs.com/" target="_blank" rel="noopener">https://www.npmjs.com/</a><br>68、码神岛： <a href="https://msd.misuland.com/" target="_blank" rel="noopener">https://msd.misuland.com/</a><br>69、掘金网：<a href="https://juejin.im/" target="_blank" rel="noopener">https://juejin.im/</a><br>70、思否：<a href="https://segmentfault.com/" target="_blank" rel="noopener">https://segmentfault.com/</a><br>71、知乎：<a href="https://www.zhihu.com" target="_blank" rel="noopener">https://www.zhihu.com</a><br>72、stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a><br>73、v2ex社区：<a href="https://www.v2ex.com/" target="_blank" rel="noopener">https://www.v2ex.com/</a><br>74、阿里云：<a href="https://www.aliyun.com" target="_blank" rel="noopener">https://www.aliyun.com</a><br>75、腾讯云：<a href="https://cloud.tencent.com/" target="_blank" rel="noopener">https://cloud.tencent.com/</a><br>76、GitBook：<a href="https://legacy.gitbook.com/@llh911001" target="_blank" rel="noopener">https://legacy.gitbook.com/@llh911001</a><br>77、妙味课堂：<a href="https://miaov.com/" target="_blank" rel="noopener">https://miaov.com/</a><br>78、慕课网：<a href="https://www.imooc.com/" target="_blank" rel="noopener">https://www.imooc.com/</a><br>79、html中文网：<a href="https://www.html.cn/" target="_blank" rel="noopener">https://www.html.cn/</a><br>80、hCoder：<a href="http://www.hcoder.net/" target="_blank" rel="noopener">http://www.hcoder.net/</a><br>81、扣丁学堂：<a href="http://www.codingke.com/" target="_blank" rel="noopener">http://www.codingke.com/</a><br>82、gitbook： <a href="https://legacy.gitbook.com/" target="_blank" rel="noopener">https://legacy.gitbook.com/</a><br>83、React官网：<a href="https://reactjs.org/" target="_blank" rel="noopener">https://reactjs.org/</a><br>84、Redux官网：<a href="https://react-redux.js.org/" target="_blank" rel="noopener">https://react-redux.js.org/</a><br>85、React Router：<a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener">https://reacttraining.com/react-router/</a><br>86、Vue官网：<a href="https://cn.vuejs.org/" target="_blank" rel="noopener">https://cn.vuejs.org/</a><br>87、NodeJS官网：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a><br>88、uni-app：<a href="https://uniapp.dcloud.io/" target="_blank" rel="noopener">https://uniapp.dcloud.io/</a><br>89、微信开发者平台：<a href="https://developers.weixin.qq.com/" target="_blank" rel="noopener">https://developers.weixin.qq.com/</a><br>90、钉钉开发者平台: <a href="https://ding-doc.dingtalk.com/" target="_blank" rel="noopener">https://ding-doc.dingtalk.com/</a><br>91、百度地图开发者平台：<a href="https://passport.baidu.com" target="_blank" rel="noopener">https://passport.baidu.com</a><br>92、DvaJS：<a href="https://dvajs.com/" target="_blank" rel="noopener">https://dvajs.com/</a><br>93、jQuery官网：<a href="https://jquery.com/" target="_blank" rel="noopener">https://jquery.com/</a><br>94、jQuery API中文文档：<a href="http://jquery.cuishifeng.cn/" target="_blank" rel="noopener">http://jquery.cuishifeng.cn/</a><br>95、ZeptoJS官网：<a href="https://zeptojs.com/" target="_blank" rel="noopener">https://zeptojs.com/</a><br>96、cheerioJS安装地址：<a href="https://www.npmjs.com/package/cheerio" target="_blank" rel="noopener">https://www.npmjs.com/package/cheerio</a><br>97、RequireJS官网：<a href="https://requirejs.org/" target="_blank" rel="noopener">https://requirejs.org/</a><br>98、Sass官网（CSS预处理器，通过编程的方式来开发CSS）：<a href="https://sass-lang.com/" target="_blank" rel="noopener">https://sass-lang.com/</a><br>99、Less官网（同上）：<a href="http://lesscss.org/" target="_blank" rel="noopener">http://lesscss.org/</a><br>100、Bootstrap官网：<a href="https://www.bootcss.com/" target="_blank" rel="noopener">https://www.bootcss.com/</a><br>101、VScode快捷键介绍：<a href="https://www.cnblogs.com/bindong/p/6045957.html" target="_blank" rel="noopener">https://www.cnblogs.com/bindong/p/6045957.html</a><br>102、Socket通信：<a href="https://socket.io/" target="_blank" rel="noopener">https://socket.io/</a><br>103、JSONPlaceholder：<a href="http://jsonplaceholder.typicode.com/" target="_blank" rel="noopener">http://jsonplaceholder.typicode.com/</a><br>104、拉勾网：<a href="https://www.lagou.com/" target="_blank" rel="noopener">https://www.lagou.com/</a><br>105、Boss直聘：<a href="https://www.zhipin.com/?sid=sem_pz_bdpc_dasou_title" target="_blank" rel="noopener">https://www.zhipin.com/?sid=sem_pz_bdpc_dasou_title</a><br>106、猎聘网：<a href="https://www.liepin.com/" target="_blank" rel="noopener">https://www.liepin.com/</a><br>107、智联招聘：<a href="http://landing.zhaopin.com/register" target="_blank" rel="noopener">http://landing.zhaopin.com/register</a><br>108、一早一晚（国内远程工程师招聘）：<a href="https://yizaoyiwan.com/" target="_blank" rel="noopener">https://yizaoyiwan.com/</a><br>109、web开发互助网：<a href="http://hz.uyi2.com/" target="_blank" rel="noopener">http://hz.uyi2.com/</a><br>110、前端面试题一到三年： <a href="https://blog.csdn.net/weixin_43606158/article/details/89811189" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/89811189</a><br>111、前端面试题三到五年：<a href="https://blog.csdn.net/weixin_43606158/article/details/89640672" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/89640672</a><br>112、项目中常用插件：<a href="https://blog.csdn.net/weixin_43606158/article/details/90136700" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details/90136700</a><br>113、CSDN吴小迪的博客：<a href="https://blog.csdn.net/weixin_43606158" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/08/26/前端开发应知网站/">前端开发应知网站</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
+        <p><span>发布时间:</span>2019-08-26, 16:15:55</p>
+        <p><span>最后更新:</span>2019-08-26, 18:14:56</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/26/前端开发应知网站/" title="前端开发应知网站">https://guhaiye.github.io/2019/08/26/前端开发应知网站/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/08/26/前端开发应知网站/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/08/10/nginx学习/">
+                    nginx学习
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"前端开发应知网站　| 海叶的小小园子　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/08/10/nginx学习/" title="下一篇: nginx学习">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/26/前端开发应知网站/">前端开发应知网站</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/10/nginx学习/">nginx学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/nginx502/">nginx502</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/js判断页面是首次被加载还是刷新/">js判断页面是首次被加载还是刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/分页全选反选的实现思路/">iview 分页全选反选的实现思路</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/13/git排除某个文件提交/">git排除某个文件提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/15/实现换主题-皮肤功能/">vue 实现换主题/皮肤功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/23/跨域iframe通信/">跨域iframe通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/‘用户和用户组/">用户和用户组</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/pwd/">每天一个linux命令之 pwd</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/mv/">每天一个linux命令之 mv</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/tar/">每天一个linux命令之 tar</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/cp/">每天一个linux命令之  cp</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/13/blogtheme/">安装好自己的博客，想要更改主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/myfirstblog/">使用Hexo+Github一步步搭建属于自己的博客（基础）</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 guhaiye
+            </div>
+            <div class="footer-right">
+               <!--
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE 
+               -->
+                <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>
