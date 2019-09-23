@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="guhaiye">
+
+
+
+<meta name="description" content="前端面试100道题">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试100道题">
+<meta property="og:url" content="https://guhaiye.github.io/2019/09/02/前端面试100道题/index.html">
+<meta property="og:site_name" content="海叶的小小园子">
+<meta property="og:description" content="前端面试100道题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-23T02:24:16.571Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端面试100道题">
+<meta name="twitter:description" content="前端面试100道题">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="海叶的小小园子" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>前端面试100道题 | 海叶的小小园子</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true,
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">guhaiye</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">微笑面对生活里面的坑坑洼洼</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:799677429@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="https://weibo.com/u/2734861804/home?wvr=5" title="新浪微博"></a>
+                            
+                                <a class="fa 博客园" href="https://www.cnblogs.com/guhaiye/" title="博客园"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">guhaiye</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">guhaiye</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">微笑面对生活里面的坑坑洼洼</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:799677429@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="https://weibo.com/u/2734861804/home?wvr=5" title="新浪微博"></a>
+                            
+                                <a class="fa 博客园" target="_blank" href="https://www.cnblogs.com/guhaiye/" title="博客园"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-前端面试100道题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/09/02/前端面试100道题/" class="article-date">
+      <time datetime="2019-09-02T08:25:18.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端面试100道题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IT技术/">IT技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>1、写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？<br>  key的作用是更新组件时判断两个节点是否相同，相同就复用，不相同就删除旧的创建新的，key是给每一个vnode的唯一id,可以依靠key,更准确, 更快的拿到oldVnode中对应的vnode节点。</p>
+<p>2、[‘1’, ‘2’, ‘3’].map(parseInt) what &amp; why ?<br>  答案是[1, NaN, NaN]</p>
+<p>  parseInt(‘1’, 0) //基数为0时，且string参数不以“0x”和“0”开头时，按照10为基数处理。这个时候返回1<br>  parseInt(‘2’, 1) //基数为1（1进制）表示的数中，最大值小于2，所以无法解析，返回NaN<br>  parseInt(‘3’, 2) //基数为2（2进制）表示的数中，最大值小于3，所以无法解析，返回NaN</p>
+<p>3、什么是防抖和节流？有什么区别？如何实现？<br>  防抖：触发高频事件后n秒内函数只会执行一次，如果n秒内高频事件再次被触发，则重新计算时间<br>  思路：每次触发事件时都取消之前的延时调用方法</p>
+<p>  function debounce(fn){<br>    let timeout = null;<br>    return function(){<br>      clearTimeout(timeout)<br>      timeout = setTimeout(() =&gt; {<br>        fn.apply(this,arguments)<br>      },500)<br>    }<br>  }<br>  function sayHi(){<br>      console.log(‘防抖成功’)<br>  }<br>  var inp = document.getElementById(‘inp’);<br>  inp.addEventListener(‘input’,debounce(sayHi))</p>
+<p>  节流：高频事件触发，但在n秒内只会执行一次，所以节流会稀释函数的执行频率<br>  思路：每次触发事件时都判断当前是否有等待执行的延时函数</p>
+<p>  function throttle(fn){<br>    let canRun = true;<br>    return function(){<br>      if(!canRun)  return;<br>      canRun = false;<br>      setTimeout(()=&gt;{<br>       fn.apply(this,arguments);<br>       canRun = true;<br>      },500)<br>    }<br>  }<br>  function sayHi(e) {<br>     console.log(e.target.innerWidth, e.target.innerHeight);<br>  }<br>  window.addEventListener(‘resize’,throttle(sayHi))</p>
+<p>4、介绍下 Set、Map、WeakSet 和 WeakMap 的区别？<br>  Set: 1、成员不能重复  2、只有键值，没有键名，有点类似数组  3、可以遍历，方法有add,delete,has<br>       ES6 新增的一种新的数据结构，类似于数组，但成员是唯一且无序的，没有重复的值。</p>
+<p>  WeakSet: 1、成员都是对象 2、成员都是弱引用，随时可以消失，可以用来保存DOM节点，不容易造成内存泄漏  3、不能遍历，方法有add,delete,has<br>  Map: 1、本质上是键值对的集合，类似集合  2、可以遍历，方法很多，可以跟各种数据格式转换<br>  WeakMap: 1、直接受对象作为健名（null除外），不接受其他类型的值作为健名  2、健名所指向的对象，不计入垃圾回收机制   3、不能遍历，方法同get,set,has,delete</p>
+<p>5、介绍下深度优先遍历和广度优先遍历，如何实现？<br>  深度优先遍历DFS 与树的先序遍历比较类似：假设初始状态是图中所有顶点均未被访问，则从某个顶点v出发，首先访问该顶点然后依次从它的各个未被访问的邻接点出发深度优先搜索遍历图，直至图中所有和v有路径相通的顶点都被访问到。<br>  若此时尚有其他顶点未被访问到，则另选一个未被访问的顶点作起始点，重复上述过程，直至图中所有顶点都被访问到为止</p>
+<p>  广度优先遍历 BFS：从图中某顶点v出发，在访问了v之后依次访问v的各个未曾访问过的邻接点，然后分别从这些邻接点出发依次访问它们的邻接点，并使得“先被访问的顶点的邻接点先于后被访问的顶点的邻接点被访问，直至图中所有已被访问的顶点的邻接点都被访问到。 如果此时图中尚有顶点未被访问，则需要另选一个未曾被访问过的顶点作为新的起始点，重复上述过程，直至图中所有顶点都被访问到为止。</p>
+<p>6、请分别用深度优先思想和广度优先思想实现一个拷贝函数？ 暂留位置</p>
+<p>7、ES5/ES6 的继承除了写法以外还有什么区别？<br>  ES5是先创建子类再在父类添加这个方法<br>  ES6是创建子类直接继承父类</p>
+<p>8、setTimeout、Promise、Async/Await 的区别<br>  a、setTimeout：延时执行函数</p>
+<pre><code>console.log(&apos;script start&apos;)    //1. 打印 script start
+setTimeout(function(){
+  console.log(&apos;settimeout&apos;)    // 4. 打印 settimeout
+})    // 2. 调用 setTimeout 函数，并定义其完成后执行的回调函数
+console.log(&apos;script end&apos;)    //3. 打印 script start
+// 输出顺序：script start-&gt;script end-&gt;settimeout
+</code></pre><p>  b、Promise本身是同步的立即执行函数， 当在executor中执行resolve或者reject的时候, 此时是异步操作， 会先执行then/catch等，当主栈完成后，才会去调用resolve/reject中存放的方法执行，打印p的时候，是打印的返回结果，一个Promise实例。</p>
+<pre><code>console.log(&apos;script start&apos;)
+let promise1 = new Promise(function (resolve) {
+    console.log(&apos;promise1&apos;)
+    resolve()
+    console.log(&apos;promise1 end&apos;)
+}).then(function () {
+    console.log(&apos;promise2&apos;)
+})
+setTimeout(function(){
+    console.log(&apos;settimeout&apos;)
+})
+console.log(&apos;script end&apos;)
+// 输出顺序: script start-&gt;promise1-&gt;promise1 end-&gt;script end-&gt;promise2-&gt;settimeout
+</code></pre><p>  c、async/await：async 函数返回一个 Promise 对象，当函数执行的时候，一旦遇到 await  就会先返回，等到触发的异步操作完成，再执行函数体内后面的语句。可以理解为，是让出了线程，跳出了 async<br>    async function async1(){<br>        console.log(‘async1 start’);<br>        await async2();<br>        console.log(‘async1 end’)<br>    }<br>    async function async2(){<br>        console.log(‘async2’)<br>    }</p>
+<pre><code>console.log(&apos;script start&apos;);
+async1();
+console.log(&apos;script end&apos;)
+
+// 输出顺序：script start-&gt;async1 start-&gt;async2-&gt;script end-&gt;async1 end
+</code></pre><p>  9、Async/Await 如何通过同步的方式实现异步   暂留空位</p>
+<p>  10、（头条）异步笔试题<br>     //请写出输出内容<br>    async function async1() {<br>        console.log(‘async1 start’);<br>        await async2();<br>        console.log(‘async1 end’);<br>    }<br>    async function async2() {<br>        console.log(‘async2’);<br>    }</p>
+<pre><code>console.log(&apos;script start&apos;);
+
+setTimeout(function() {
+    console.log(&apos;setTimeout&apos;);
+}, 0)
+
+async1();
+
+new Promise(function(resolve) {
+    console.log(&apos;promise1&apos;);
+    resolve();
+}).then(function() {
+    console.log(&apos;promise2&apos;);
+});
+console.log(&apos;script end&apos;);
+
+
+/*
+script start
+async1 start
+async2
+promise1
+script end
+async1 end
+promise2
+setTimeout
+*/
+</code></pre><p>11、编写一个程序将数组扁平化去并除其中重复部分数据，最终得到一个升序且不重复的数组<br>    var arr =  [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10];<br>      Array.from(new Set(arr.flat(Infinity))).sort((a,b)=&gt;{ return a-b})</p>
+<p>12、JS 异步解决方案的发展历程以及优缺点<br>   a、回调函数（callback）<br>     缺点：回调地狱，不能用 try catch 捕获错误，不能 return<br>          缺乏顺序性： 回调地狱导致的调试困难，和大脑的思维方式不符<br>          嵌套函数存在耦合性，一旦有所改动，就会牵一发而动全身，即（控制反转）<br>          嵌套函数过多的多话，很难处理错误<br>     优点：解决了同步的问题</p>
+<pre><code> ajax(&apos;XXX1&apos;, () =&gt; {
+    // callback 函数体
+    ajax(&apos;XXX2&apos;, () =&gt; {
+        // callback 函数体
+        ajax(&apos;XXX3&apos;, () =&gt; {
+            // callback 函数体
+        })
+    })
+})
+</code></pre><p>   b、Promise<br>     Promise就是为了解决callback的问题而产生的。<br>     缺点：无法取消 Promise ，错误需要通过回调函数来捕获<br>     优点：解决了回调地狱的问题<br>     ajax(‘XXX1’)<br>      .then(res =&gt; {<br>          // 操作逻辑<br>          return ajax(‘XXX2’)<br>      }).then(res =&gt; {<br>          // 操作逻辑<br>          return ajax(‘XXX3’)<br>      }).then(res =&gt; {<br>          // 操作逻辑<br>      })</p>
+<pre><code>let p1 = new Promise((resolve, reject) =&gt; {
+    resolve(&apos;成功了&apos;)
+})
+let p2 = new Promise((resolve, reject) =&gt; {
+    resolve(&apos;success&apos;)
+})
+Promise.all([p1, p2]).then((result) =&gt; {
+    console.log(result)               //[&apos;成功了&apos;, &apos;success&apos;]
+}).catch((error) =&gt; {
+    console.log(error)
+})
+</code></pre><p>   c、Generator<br>     特点：可以控制函数的执行，可以配合 co 函数库使用<br>     function *fetch() {<br>        yield ajax(‘XXX1’, () =&gt; {})<br>        yield ajax(‘XXX2’, () =&gt; {})<br>        yield ajax(‘XXX3’, () =&gt; {})<br>     }<br>     let it = fetch()<br>     let result1 = it.next()<br>     let result2 = it.next()<br>     let result3 = it.next()</p>
+<p>   d、Async/await<br>     优点是：代码清晰，不用像 Promise 写一大堆 then 链，处理了回调地狱的问题<br>     缺点：await 将异步代码改造成同步代码，如果多个异步操作没有依赖性而使用 await 会导致性能上的降低。<br>     async function test() {<br>      // 以下代码没有依赖性的话，完全可以使用 Promise.all 的方式<br>      // 如果有依赖性的话，其实就是解决回调地狱的例子了<br>      await fetch(‘XXX1’)<br>      await fetch(‘XXX2’)<br>      await fetch(‘XXX3’)<br>    }</p>
+<p>13、Promise 构造函数是同步执行还是异步执行，那么 then 方法呢？<br>   promise构造函数是同步执行的，then方法是异步执行的</p>
+<p>14、如何实现一个 new（暂留位置）</p>
+<p>15、简单讲解一下http2的多路复用<br>   简单来说，就是在同一个tcp连接，同一个时刻可以传输多个http请求<br>   HTTP2采用二进制格式传输，取代了HTTP1.x的文本格式，二进制格式解析更高效。<br>   多路复用代替了HTTP1.x的序列和阻塞机制，所有的相同域名请求都通过同一个TCP连接并发完成。在HTTP1.x中，并发多个请求需要多个TCP连接，浏览器为了控制资源会有6-8个TCP连接都限制。<br>   HTTP2中同域名下所有通信都在单个连接上完成，消除了因多个 TCP 连接而带来的延时和内存消耗。<br>   单个连接上可以并行交错的请求和响应，之间互不干扰</p>
+<p>16、谈谈你对TCP三次握手和四次挥手的理解<br>   三次握手：<br>   client：你好，我是A<br>   server：收到，我是B<br>   client：那咱们可以连接了</p>
+<p>   四次挥手<br>   client：你好，我要关了<br>   server：稍等，还有一个包<br>   server：我已好，随时可以关闭<br>   client：关闭吧，不用回复</p>
+<p>17、A、B 机器正常连接后，B 机器突然重启，问 A 此时处于 TCP 什么状态<br>   因为B会在重启之后进入tcp状态机的listen状态，只要当a重新发送一个数据包（无论是syn包或者是应用数据）b和a沟通过程双方有一份数据， b重启之后这份数据没有了，就会发送rst重置。，b端应该会主动发送一个带rst位的重置包来进行连接重置，所以a应该在syn_sent状态</p>
+<p>18、React 中 setState 什么时候是同步的，什么时候是异步的？<br>   如果是由React引发的事件处理（比如通过onClick引发的事件处理），调用setState不会同步更新this.state，除此之外的setState调用会同步执行this.state。所谓“除此之外”，指的是绕过React通过addEventListener直接添加的事件处理函数，还有通过setTimeout/setInterval产生的异步调用。</p>
+<p>19、React setState 笔试题，下面的代码输出什么？<br>   class Example extends React.Component {<br>      constructor() {<br>        super();<br>        this.state = {<br>          val: 0<br>        };<br>      }</p>
+<pre><code>  componentDidMount() {
+    this.setState({val: this.state.val + 1});
+    console.log(this.state.val);    // 第 1 次 log：输出0
+
+    this.setState({val: this.state.val + 1});
+    console.log(this.state.val);    // 第 2 次 log：输出0
+
+    setTimeout(() =&gt; {
+      this.setState({val: this.state.val + 1});
+      console.log(this.state.val);  // 第 3 次 log：输出2
+
+      this.setState({val: this.state.val + 1});
+      console.log(this.state.val);  // 第 4 次 log：输出3
+    }, 0);
+  }
+
+  render() {
+    return null;
+  }
+};
+</code></pre><p>  1、第一次和第二次都是在 react 自身生命周期内，触发时 isBatchingUpdates 为 true，所以并不会直接执行更新 state，而是加入了 dirtyComponents，所以打印时获取的都是更新前的状态 0。<br>  2、两次 setState 时，获取到 this.state.val 都是 0，所以执行时都是将 0 设置成 1，在 react 内部会被合并掉，只执行一次。设置完成后 state.val 值为 1。<br>  3、setTimeout 中的代码，触发时 isBatchingUpdates 为 false，所以能够直接进行更新，所以连着输出 2，3。</p>
+<p>20、介绍下 npm 模块安装机制，为什么输入 npm install 就可以自动安装对应的模块？<br>   1、执行工程自身 preinstall<br>   2、确定首层依赖模块<br>   3、获取模块<br>   4、模块扁平化（dedupe）<br>   5、安装模块<br>   6、执行工程自身生命周期</p>
+<p>21、有以下 3 个判断数组的方法，请分别介绍它们之间的区别和优劣<br>   a、Object.prototype.toString.call()<br>     每一个继承Object的对象都有toString方法，如果toString方法没有被重写的话，会返回[Object type],其中type为对象的类型，但当除了Object的类型的对象外，其他类型直接使用toString方法时，会直接返回都是内容的字符串，所以我们需要使用call或者apply方法来改变toString方法的执行上下文<br>     const an = [‘111’,’333’]<br>     an.toString()<br>     Object.prototype.toString.call(an)</p>
+<p>   b、instanceof<br>     是通过判断对象的原型链中是不是能找到类型的prototype<br>     []  instanceof Array</p>
+<p>   c、Array.isArray()<br>     功能：用来判断对象是否为数组<br>     Array.isArray(arr);</p>
+<p>22、介绍下重绘和回流（Repaint &amp; Reflow），以及如何进行优化<br>   a、浏览器渲染机制<br>     浏览器采用流式布局模型<br>     浏览器会把HTML解析成DOM，把css解析成CSSOM，DOM和CSSOM合并就产生了渲染树<br>     有了渲染树，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到界面上<br>     浏览器使用流式布局，对渲染树的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，故避免使用table布局<br>   b、重绘<br>     由于节点的集合属性发生改变或者由于样式发生改变而不影响布局的，称为重绘，例如：outline，visibility，color，backgroundcolor等<br>   c、回流<br>     是布局或者集合属性需要改变就发生回流，回流是影响浏览器性能的关键因素</p>
+<p>   回流必然会发生重绘，重绘不一定发生回流</p>
+<p>   浏览器优化<br>   浏览器大多是通过队列机制来批量更新布局，浏览器会把修改操作放在队列里，至少浏览器刷新才会清空队列，但当你获取布局信息的时候队列中可能有会影响这些属性或方法返回值的操作，即使没有，浏览器也会强制清空队列，触发回流与重绘来确保返回正确的值</p>
+<p>23、介绍下观察者模式和发布-订阅模式的区别，各自适用于什么场景</p>
+<p>   观察者模式中主体和观察者是互相感知的，发布-订阅模式是借助第三方来实现调度的，发布者和订阅者之间互不感知</p>
+<p>   发布-订阅模式就好像报社，邮局和个人的关系，报纸的订阅和分发是由邮局来完成的，报局只负责将报纸发送给邮局<br>   观察者模式就好像个体奶农和个人的关系，奶农负责统计有多少人订了产品，所以个人都会有一个相同拿牛奶的方法，奶农有新奶了就负责调用这个方法</p>
+<p>24、聊聊 Redux 和 Vuex 的设计思想<br>   共同点：两者都是处理全局状态的工具库，大致实现思想是：全局state保存状态–&gt;dispatch(action)–&gt;reducer(vuex里面的mutaion)–&gt;生成new state,整个状态为同步操作<br>   区别：最大的区别是处理异步的不同，vuex里面多了一步commit操作，在action之后commit(mutation)之前处理异步，而redux里面则是通过中间件处理</p>
+<p>25、浏览器和Node 事件循环的区别<br>   其中一个区别是浏览器的event loop和nodejs的event loop在处理异步事件的顺序是不同的，nodejs中有micro event，其中promise属于micro event该异步事件的处理顺序就和浏览器不同，nodejs V11.0以上，这两者之间的顺序就相同了</p>
+<p>26、介绍模块化发展历程<br>   模块化主要用来抽离公共代码，隔离作用域，避免变量冲突等<br>   IIFE：使用自执行函数来编写模块化，特点：在一个单独的函数作用域中执行代码，避免变量冲突<br>         (function(){<br>           return {<br>             data: []<br>           }<br>         })<br>   AMD:使用requireJS来编写模块化，特点：依赖必须提前声明好<br>       define(‘./index.js’,function(code){<br>           //code就是index.js返回的内容<br>       })<br>   CMD:使用seaJS来编写模块化，特点：支持动态引入依赖文件<br>       define(function(require, exports, module) {<br>          var indexCode = require(‘./index.js’);<br>       });<br>   CommonJs:nodejs中自带的模块化<br>       var fs = require(‘fs’);<br>   UMD:兼容AMD,CommonJs模块化语法<br>   webpack(require.ensure):webpack 2.x中的代码分割<br>   ES Modules:ES6引入的模块化，支持import来引入另一个js<br>       import a from ‘a’</p>
+<p>27、var 命令和 function 命令声明的全局变量，依旧是顶层对象的属性，但 let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。<br>   属于块级作用域</p>
+<p>28、cookie 和 token 都存放在 header 中，为什么不会劫持 token？<br>   a、首先token不是防止xss的，而是为了防止csrf的<br>   b、csrf攻击的原因是浏览器会自动带上cookie，而浏览器不会自动带上token</p>
+<p>29、聊聊 Vue 的双向数据绑定，Model 如何改变 View，View 又是如何改变 Model 的<br>   M-&gt;V：（data binding）这样可以大量节省你人肉来update View的代码<br>   V-&gt;M：（DOM listeners）这样你的modal会随着view触发事件而改变</p>
+<p>   a、Object.defineProperty方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象<br>   b、observe的功能就是用来检测数据的变化，实现方式是给非VNode的对象类型数据添加一个Observer,对象已经添加过则直接返回，否则在满足一定条件下去实例化一个Observer对象实例</p>
+<p>30、两个数组合并成一个数组<br>   请把俩个数组 [A1, A2, B1, B2, C1, C2, D1, D2] 和 [A, B, C, D]，合并为 [A1, A2, A, B1, B2, B, C1, C2, C, D1, D2, D]。</p>
+<p>   const a = [A1, A2, B1, B2, C1, C2, D1, D2]<br>   const prefix = [A, B, C, D]<br>   prefix.map(p =&gt; {<br>      res = res.concat(a.filter(s =&gt; s.indexOf(p)),p)<br>   })</p>
+<p> 31、改造下面的代码，使之输出0 - 9，写出你能想到的所有解法。<br>    for (var i = 0; i&lt; 10; i++){<br>        setTimeout(() =&gt; {<br>            console.log(i);<br>        }, 1000)<br>    }</p>
+<p> 32、Virtual DOM 真的比操作原生 DOM 快吗？谈谈你的想法。<br>    这是一个性能 VS 可维护性的取舍，框架的意义在于为你掩盖底层的DOM操作，让你用更声明式的方式来描述你的目的，从而让你的代码更容易维护，没有任何框架可以比纯手动的优化DOM操作更快，因为框架的DOM操作层需要应对任何上层API可能产生的操作，它的实现必须是普适的</p>
+<pre><code>总结：主流的框架 + 合理的优化，足以应对绝大部分应用的性能需求。如果是对性能有极致需求的特殊情况，其实应该牺牲一些可维护性采取手动优化：比如 Atom 编辑器在文件渲染的实现上放弃了 React 而采用了自己实现的 tile-based rendering；又比如在移动端需要 DOM-pooling 的虚拟滚动，不需要考虑顺序变化，可以绕过框架的内置实现自己搞一个
+</code></pre><p> 33、下面的代码打印什么内容，为什么？<br>    var b = 10;<br>    (function b(){<br>        b = 20;<br>        console.log(b);<br>    })();</p>
+<pre><code>打印出来是b(){}
+</code></pre><p> 34、简单改造上面的代码，使之分别打印 10 和 20。</p>
+<p> 35、浏览器缓存读取规则</p>
+<p> 36、使用迭代的方式实现 flatten 函数。<br>    let arr = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10, [11, [12, 13]]]<br>    const flatten = function (arr) {<br>        while (arr.some(item =&gt; Array.isArray(item))) {<br>            arr = [].concat(…arr)<br>        }<br>        return arr<br>    }<br>    console.log(flatten(arr))<br>    ES6简写：<br>    const flatten = array =&gt; array.reduce((acc, cur) =&gt; (Array.isArray(cur) ? […acc, …flatten(cur)] : […acc, cur]), [])</p>
+<p> 37、为什么 Vuex 的 mutation 和 Redux 的 reducer 中不能做异步操作？<br>    a、Mutation 必须是同步函数<br>    b、更改state的函数必须是纯函数，纯函数既是统一输入就会统一输出，没有任何副作用，如果是异步则会引入额外的副作用，导致更改后的state不可  预测</p>
+<p> 38、下面代码中 a 在什么情况下会打印 1？<br>    var a = ?;<br>    if(a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3){<br>         console.log(1);<br>    }</p>
+<pre><code>此题考查的是==的隐式类型转换
+第一种：
+var a = {
+  i: 1,
+  toString() {
+    return a.i++;
+  }
+}
+
+if( a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 ) {
+  console.log(1);
+}
+第二种：
+var a = Object.create({
+count: 0,
+    valueOf: function() {
+        return ++this.count;
+    }
+});
+
+if (a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3) {
+    console.log(1);
+}
+</code></pre><p> 39、介绍下 BFC 及其应用<br>    BFC就是块级格式上下文，是页面盒模型布局中的一种css渲染模式，相当于一个独立容器，里面的元素和外面的元素相互不影响，创建BFC的方式有：<br>    a、html根元素<br>    b、float浮动<br>    c、绝对定位<br>    d、overflow不是visible<br>    e、display为表格布局或者弹性布局</p>
+<pre><code>BFC主要的作用是：
+1、清除浮动
+2、防止同一BFC容器中的相邻元素间的外边距重叠问题
+</code></pre><p> 40、在 Vue 中，子组件为何不可以修改父组件传递的 Prop，如果修改了，Vue 是如何监控到属性的修改并给出警告的</p>
+<pre><code>a、子组件为何不可以修改父组件传递的 Prop？
+单向数据流，易于监测数据的流动，出现了错误可以更加迅速的定位到错误发生的位置。
+
+b、如果修改了，Vue 是如何监控到属性的修改并给出警告的。
+下面的代码就是实现Vue提示修改props的操作，在组件 initProps 方法的时候，会对props进行defineReactive操作，传入的第四个参数是自定义的set函数，该函数会在触发props的set方法时执行，当props修改了，就会运行这里传入的第四个参数，然后进行判断，如果不是root根组件，并且不是更新子组件，那么说明更新的是props，所以会警告
+</code></pre><p> 41、下面代码输出什么？</p>
+<pre><code> var a = 10;
+(function () {
+    console.log(a)
+    a = 5
+    console.log(window.a)
+    var a = 20;
+    console.log(a)
+})()
+
+undefined -&gt; 10 -&gt; 20
+</code></pre><p> 42、实现一个 sleep 函数</p>
+<p>   // 方法一</p>
+<pre><code>function sleep(time) {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+      resolve(time)
+    }, time)
+  })
+}
+
+sleep(5000).then((time) =&gt; { console.log(`你睡了${time / 1000}s，然后做你的事情`) })
+</code></pre><p>   // 方法二</p>
+<pre><code>function async sleep2(time) {
+  await sleep(time)
+  // then do you thing
+  console.log(`你睡了${time / 1000}s，然后做你的事情`)
+  // async 函数返回的是一个promise对象
+}
+// 方法三
+// 通过generator 还是返回一个promise，这个不知道具体的意义,这和返回一个普通的promise有区别么
+
+function* sleep3(time) {
+  yield new Promise(resolve =&gt; {
+    setTimeout(resolve, time)
+  })
+}
+
+sleep3(5000).next().value.then(() =&gt; { console.log(&quot;睡了一会儿，然后做你做的事情&quot;)})
+// 方法四
+// 通过传统的setTimeout去做
+
+function sleep4(func, time) {
+  setTimeout(func, time)
+}
+</code></pre><p> 43、使用 sort() 对数组 [3, 15, 8, 29, 102, 22] 进行排序，输出结果<br>    var arr = [3, 15, 8, 29, 102, 22];<br>    arr.sort()  输出结果：[102, 15, 22, 29, 3, 8]<br>    根据MDN上的解释，默认的排序方式会将数组元素转换为字符串，然后比较字符串中字符UTF-16编码顺序来进行排序，所以‘102’会排在‘15’前面</p>
+<p> 44、介绍 HTTPS 握手过程<br>    a、客户端使用https的url访问web服务器，要求与服务器建立ssl连接<br>    b、web服务器收到客户端请求后，会将网站的证书（包含密钥）传送一份给客户端<br>    c、客户端收到网站证书后会检查证书的颁发机构以及过期时间，如果没有问题就随机产生一个密钥<br>    d、客户端利用公钥将会话密钥加密，并传送给服务端，服务端利用自己的私钥解密解密出会话密钥<br>    e、之后服务器和客户端使用密钥加密传输</p>
+<p> 45、HTTPS 握手过程中，客户端如何验证证书的合法性<br>    a、校验证书的颁发机构是否受客户端信任。<br>    b、通过 CRL 或 OCSP 的方式校验证书是否被吊销。<br>    c、对比系统时间，校验证书是否在有效期内。<br>    d、通过校验对方是否存在证书的私钥，判断证书的网站域名是否与证书颁发的域名一致。</p>
+<p> 46、输出以下代码执行的结果并解释为什么<br>    var obj = {<br>        ‘2’: 3,<br>        ‘3’: 4,<br>        ‘length’: 2,<br>        ‘splice’: Array.prototype.splice,<br>        ‘push’: Array.prototype.push<br>    }<br>    obj.push(1)<br>    obj.push(2)<br>    console.log(obj)</p>
+<pre><code>类数组（ArrayLike）：
+一组数据，由数组来存，但是如果要对这组数据进行扩展，会影响到数组原型，ArrayLike的出现则提供了一个中间数据桥梁，ArrayLike有数组的特性， 但是对ArrayLike的扩展并不会影响到原生的数组。
+
+题分析：
+这个obj中定义了两个key值，分别为splice和push分别对应数组原型中的splice和push方法，因此这个obj可以调用数组中的push和splice方法，调用对象的push方法：push(1)，因为此时obj中定义length为2，所以从数组中的第二项开始插入，也就是数组的第三项（下表为2的那一项），因为数组是从第0项开始的，这时已经定义了下标为2和3这两项，所以它会替换第三项也就是下标为2的值，第一次执行push完，此时key为2的属性值为1，同理：第二次执行push方法，key为3的属性值为2。此时的输出结果就是：Object(4) [empty × 2, 1, 2, splice: ƒ, push: ƒ]
+
+如果题中的length改成0 则结果会变成Object(2) [1, 2, 2: 3, 3: 4, splice: ƒ, push: ƒ]
+</code></pre><p> 47、双向绑定和 vuex 是否冲突<br>    在严格模式下使用vuex，当用户输入时，v-model会直接试图修改属性值，但这个修改不是在mutation中修改的，所以会抛出一个错误，当需要在组件中使用vuex的state时，有2种解决方案<br>    a、在input中绑定value（vuex中的state）然后监听input的change事件或者input事件，在事件回调中调用mutation修改state的值<br>    b、使用带有setter的双向绑定计算属性</p>
+<p> 48、call 和 apply 的区别是什么，哪个性能更好一些<br>    作用是一样的，区别在于传入参数的不同<br>    第一个参数是：指定函数体内this的指向<br>    第二个参数开始不同，apply是传入带下标的集合，数组或者类数组，apply是把它传给函数作为参数，call从第二个参数开始是不固定的，都会传给函数作为参数<br>    call比apply的性能要好，平常可以多用call，call传入参数格式正是内部所需要的格式</p>
+<p> 49、什么通常在发送数据埋点请求的时候使用的是 1x1 像素的透明 gif 图片？</p>
+<p> 50、（百度）实现 (5).add(3).minus(2) 功能</p>
+<p> 51、Vue 的响应式原理中 Object.defineProperty 有什么缺陷？<br>    a、Object.defineProperty无法监控到数组下标的变化，导致通过数组下标添加元素，不能实时响应<br>    b、Object.defineProperty只能劫持对象的属性从而需要对每个对象，每个属性进行遍历，如果，属性值是对象，还需要深度遍历，proxy可以劫持整  个对象，并返回一个新的对象<br>    c、proxy不仅可以代理对象，还可以代理数组，还可以代理动态增加的属性</p>
+<pre><code>proxy有以下优点：
+可以劫持整个对象，并返回一个新对象
+有13种劫持操作
+</code></pre><p> 52、怎么让一个 div 水平垂直居中</p>
+<p> 53、输出以下代码的执行结果并解释为什么<br>    var a = {n: 1};<br>    var b = a;<br>    a.x = a = {n: 2};<br>    console.log(a.x)<br>    console.log(b.x)</p>
+<pre><code>结果:
+undefined
+{n:2}
+
+首先，a和b同时引用了{n:2}对象，接着执行到a.x = a = {n：2}语句，尽管赋值是从右到左的没错，但是.的优先级比=要高，所以这里首先执行a.x，相当于为a（或者b）所指向的{n:1}对象新增了一个属性x，即此时对象将变为{n:1;x:undefined}。之后按正常情况，从右到左进行赋值，此时执行a ={n:2}的时候，a的引用改变，指向了新对象{n：2},而b依然指向的是旧对象。之后执行a.x = {n：2}的时候，并不会重新解析一遍a，而是运用最初解析a.x时候的a，也即旧对象，故此时旧对象的x的值为{n：2}，旧对象为 {n:1;x:{n：2}}，它被b引用着。
+后面输出a.x的时候，又要解析a了，此时的a是指向新对象的a，而这个新对象是没有x属性的，故访问时输出undefined；而访问b.x的时候，将输出旧对象的x的值，即{n:2}。
+</code></pre><p> 54、冒泡排序如何实现，时间复杂度是多少， 还可以如何改进？<br>    时间复杂度：O(n^2) </p>
+<p> 55、某公司 1 到 12 月份的销售额存在一个对象里面，如下：{1:222, 2:123, 5:888}，请把数据处理为如下结构：[222, 123, null, null, 888, null, null, null, null, null, null, null]。<br>    let obj = {1:222, 2:123, 5:888};<br>    obj.length = 12;<br>    let _obj = Array.from(obj).slice(1);<br>    let newObj =  _obj.map((item) =&gt; {if(item === undefined) {return null;} else {return item;}});<br>    console.log(newObj);</p>
+<p> 56、要求设计 LazyMan 类，实现以下功能</p>
+<p> 57、分析比较 opacity: 0、visibility: hidden、display: none 优劣和适用场景。</p>
+<p> 58、箭头函数与普通函数（function）的区别是什么？构造函数（function）可以使用 new 生成实例，那么箭头函数可以吗？为什么？</p>
+<pre><code>箭头函数是普通函数的简写，可以更优雅的定义一个函数，和普通函数相比，有以下几点差异：
+1、函数体内的 this 对象，就是定义时所在的对象，而不是使用时所在的对象。
+2、不可以使用 arguments 对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。
+3、不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数。
+4、不可以使用 new 命令，因为：没有自己的 this，无法调用 call，apply。
+没有 prototype 属性 ，而 new 命令在执行时需要将构造函数的 prototype 赋值给新的对象的 __proto__
+</code></pre><p> 59、给定两个数组，写一个方法来计算它们的交集。<br>    let num1 = [1, 2, 2, 1],num2 = [2, 2];<br>    let newarr = num2.filter((item)=&gt;{<br>        return num1.includes(item)<br>    })<br>    return newarr;</p>
+<p> 60、已知如下代码，如何修改才能让图片宽度为 300px ？注意下面代码不可修改。</p>
+<pre><code>&lt;img src=&quot;1.jpg&quot; style=&quot;width:480px!important;”&gt;
+</code></pre><p> 61、介绍下如何实现 token 加密<br>    JWT</p>
+<p> 62、redux 为什么要把 reducer 设计成纯函数<br>    redux的设计思想就是不产生副作用，数据更改的状态可回溯，所以redux中处处都是纯函数</p>
+<p> 63、如何设计实现无缝轮播</p>
+<p> 64、模拟实现一个 Promise.finally</p>
+<pre><code>Promise.prototype.finally = function(callback){
+  let p = this.constructor;
+  return this.then(
+     value =&gt; p.resolve(callback()).then(()=&gt;value),
+     reason =&gt; p.resolve(callback()).then(() =&gt; {throw reason})
+  );
+}
+</code></pre><p> 65、a.b.c.d 和 a[‘b’][‘c’][‘d’]，哪个性能更高？<br>    前一个比后一个性能高一些</p>
+<p> 66、ES6 代码转成 ES5 代码的实现思路是什么<br>    题目说的是ES6,所以不考虑.jsx,.ts这类js扩展语言<br>    ES6转ES5目前行业标配是Babel,转换的大致流程如下：<br>    a、解析：解析代码字符串，生成AST<br>    b、转换：将一定的规则转换，修改AST<br>    c、生成：将修改后的AST转换成普通代码</p>
+<p> 67、随机生成一个长度为 10 的整数类型的数组，例如 [2, 10, 3, 4, 5, 11, 10, 11, 20]，将其排列成一个新数组，要求新数组形式如下，例如 [[2, 3, 4, 5], [10, 11], [20]]。<br>    //随机生成长度为10的数组<br>    function randomNumber(len) {<br>        const max = 20;<br>        const arr = [];<br>        for (let i = 0; i &lt; len; i++) {<br>            arr.push(Math.floor(Math.random() * max));<br>        }</p>
+<pre><code>    const sorted = [...new Set(arr)].sort((a, b) =&gt; a - b); // 去重排序
+    return sorted;
+}
+//排序成新的数组
+function sort(arr) {
+    let dict = {};
+    let length = 0;
+    arr.forEach(i =&gt; {
+        let key = Math.floor(i / 10);
+        if (Reflect.has(dict, key)) {
+            dict[key].push(i);
+        } else {
+            dict[key] = [i];
+            length++;
+        }
+    });
+    dict.length = length;
+    return Array.from(dict);
+}
+
+const res = randomNumber(10);
+console.log(sort(res));
+
+68、如何解决移动端 Retina 屏 1px 像素问题
+
+   a、解决方案是通过 JavaScript 检测浏览器能否处理0.5px的边框，如果可以，给html标签元素添加个class。
+        if (window.devicePixelRatio &amp;&amp; devicePixelRatio &gt;= 2) {
+          var testElem = document.createElement(&apos;div&apos;);
+          testElem.style.border = &apos;.5px solid transparent&apos;;
+          document.body.appendChild(testElem);
+        }
+        if (testElem.offsetHeight == 1) {
+          document.querySelector(&apos;html&apos;).classList.add(&apos;hairlines&apos;);
+        }
+          document.body.removeChild(testElem);
+        }
+        然后，极细的边框样式就容易了：
+
+        div {
+          border: 1px solid #bbb;
+        }
+        .hairlines div {
+          border-width: 0.5px;
+        }
+
+   b、使用border-image实现
+        .border-image-1px {
+          border-bottom: 1px solid #666;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+          .border-image-1px {
+            border-bottom: none;
+            border-width: 0 0 1px 0;
+            -webkit-border-image: url(../img/linenew.png) 0 0 2 0 stretch;
+            border-image: url(../img/linenew.png) 0 0 2 0 stretch;
+          }
+        }
+
+   c、使用background-image实现
+       .background-image-1px {
+          background: url(../img/line.png) repeat-x left bottom;
+          -webkit-background-size: 100% 1px;
+          background-size: 100% 1px;
+        }
+
+   d、多背景渐变实现
+       .background-gradient-1px {
+          background:
+            linear-gradient(#000, #000 100%, transparent 100%) left / 1px 100% no-repeat,
+            linear-gradient(#000, #000 100%, transparent 100%) right / 1px 100% no-repeat,
+            linear-gradient(#000,#000 100%, transparent 100%) top / 100% 1px no-repeat,
+            linear-gradient(#000,#000 100%, transparent 100%) bottom / 100% 1px no-repeat
+        }
+        /* 或者 */
+        .background-gradient-1px{
+          background:
+            -webkit-gradient(linear, left top, right bottom, color-stop(0, transparent), color-stop(0, #000), to(#000)) left / 1px 100% no-repeat,
+            -webkit-gradient(linear, left top, right bottom, color-stop(0, transparent), color-stop(0, #000), to(#000)) right / 1px 100% no-repeat,
+            -webkit-gradient(linear, left top, right bottom, color-stop(0, transparent), color-stop(0, #000), to(#000)) top / 100% 1px no-repeat,
+            -webkit-gradient(linear, left top, right bottom, color-stop(0, transparent), color-stop(0, #000), to(#000)) bottom / 100% 1px no-repeat
+        }
+
+   e、使用box-shadow模拟边框
+        .box-shadow-1px {
+          box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+        }
+
+   f、viewport + rem 实现
+      在devicePixelRatio = 2 时，输出viewport：
+      &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no&quot;&gt;
+
+ 69、 如何把一个字符串的大小写取反（大写变小写小写变大写），例如 ’AbC&apos; 变成 &apos;aBc&apos; 
+     function  processString(s){
+       var arr = s.split(&apos;&apos;);
+       var new_arr = arr.map((item)=&gt;{
+          return item === item.toUpperCase()?item.toUpperCase:item.toLowerCase()
+       })
+       return new_arr.join(&apos;&apos;);
+     }         
+
+ 70、介绍下 webpack 热更新原理，是如何做到在不刷新浏览器的前提下更新页面的
+    a.当修改了一个或多个文件；
+    b.文件系统接收更改并通知webpack；
+    c.webpack重新编译构建一个或多个模块，并通知HMR服务器进行更新；
+    d.HMR Server 使用webSocket通知HMR runtime 需要更新，HMR运行时通过HTTP请求更新jsonp；
+    e.HMR运行时替换更新中的模块，如果确定这些模块无法更新，则触发整个页面刷新。
+
+ 71、实现一个字符串匹配算法，从长度为 n 的字符串 S 中，查找是否存在字符串 T，T 的长度是 m，若存在返回所在位置
+    const find = (S,T) =&gt; S.indexOf(T)
+
+ 72、为什么普通 for 循环的性能远远高于 forEach 的性能，请解释其中的原因
+
+ 73、介绍下 BFC、IFC、GFC 和 FFC
+
+    bfc: 块级格式化上下文 display:block;
+    ifc: 内联格式化上下文 display:inline;
+    gfc：网格格式化上下文 display: grid
+    ffc: 弹性格式化上下文 display: flex
+
+ 74、使用 JavaScript Proxy 实现简单的数据绑定
+
+ 75、数组里面有10万个数据，取第一个元素和第10万个元素的时间相差多少
+    数组可以直接根据索引取的对应的元素，所以不管取哪个位置的元素的时间复杂度都是 O(1)
+    消耗时间几乎一致，差异可以忽略不计
+
+ 76、输出以下代码运行结果
+    // example 1
+    var a={}, b=&apos;123&apos;, c=123;  
+    a[b]=&apos;b&apos;;
+    a[c]=&apos;c&apos;;  //c的键名会被替换成字符串‘123’,会把b覆盖掉
+    console.log(a[b]);  //输出c
+
+    ---------------------
+    // example 2
+    var a={}, b=Symbol(&apos;123&apos;), c=Symbol(&apos;123&apos;);  
+    a[b]=&apos;b&apos;; //都是symbol类型
+    a[c]=&apos;c&apos;; //都是symbol类型,不会覆盖b
+    console.log(a[b]);  //输出b
+
+    ---------------------
+    // example 3
+    var a={}, b={key:&apos;123&apos;}, c={key:&apos;456&apos;};  
+    a[b]=&apos;b&apos;; // 对象类型会调用 toString 方法转换成字符串 [object Object]
+    a[c]=&apos;c&apos;;  // 对象类型会调用 toString 方法转换成字符串 [object Object],覆盖b
+    console.log(a[b]); //输出c
+    解题思路：
+    a、对象的键名只能是字符串和symbol类型，symbol类型：表示独一无二的值，symbol最大的用途是用来定义对象的唯一属性名，可以作为对象属性的标识符使用
+    b、其它类型的键名会被转换成字符串类型
+    c、对象转字符串会默认调用toString方法
+
+ 77、给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+    示例：
+        输入: [1, 2, 3, 4, 5, 6, 7] 和 k = 3
+        输出: [5, 6, 7, 1, 2, 3, 4]
+        解释:
+        向右旋转 1 步: [7, 1, 2, 3, 4, 5, 6]
+        向右旋转 2 步: [6, 7, 1, 2, 3, 4, 5]
+        向右旋转 3 步: [5, 6, 7, 1, 2, 3, 4]
+
+    解题思路：
+    function  rotate(arr,k){
+       const len = arr.length;
+       const step = k%len //可能步数比数组的长度长
+       return arr.slice(step).concat(arr.slice(0,len-step));
+    }
+
+ 78、Vue 的父组件和子组件生命周期钩子执行顺序是什么
+    父组建： beforeCreate -&gt; created -&gt; beforeMount
+    子组件： -&gt; beforeCreate -&gt; created -&gt; beforeMount -&gt; mounted
+    父组件： -&gt; mounted
+    总结：从外到内，再从内到外
+
+ 79、input 搜索如何防抖，如何处理中文输入
+
+
+ 80、介绍下 Promise.all 使用、原理实现及错误处理
+    Promise.all接收一个数组作为参数，p1,p2,p3都是promise实例，如果不是，就会先调用下面讲到的Promise.resolve方法，将参数转为Promise实例，再进一步处理（Promise.all的参数可以不是数组，但必须是interator接口，且返回的每个成员都是Promise实例）
+
+ 81、打印出 1 - 10000 之间的所有对称数 例如：121、1331 等
+    [...Array(10000).keys()].map(x=&gt;x+1).filter(x=&gt;{
+       return x.toString().length &gt; 1 &amp;&amp; x === Number(x.toString().split(&apos;&apos;).reverse().join(&apos;&apos;))
+    })
+
+ 82、算法题「移动零」，给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序
+    let nums = [0,0,0,3,12];
+    function zeroMove(array) {
+        let len = array.length;
+        let j = 0;
+        for(let i=0;i&lt;len-j;i++){
+            if(array[i]===0){
+                array.push(0);
+                array.splice(i,1);
+                i --;
+                j ++;
+            }
+        }
+        return array;
+    }
+
+ 83、var,let 和 const 区别的实现原理是什么
+    let,const和var都存在变量提升
+    var 和 let 用以声明变量，const 用于声明只读的常量；
+    var 声明的变量，不存在块级作用域，在全局范围内都有效，let 和 const 声明的，只在它所在的代码块内有效；
+    let 和 const 不存在像 var 那样的 “变量提升” 现象，所以 var 定义变量可以先使用，后声明，而 let 和 const 只可先声明，后使用；
+    let 声明的变量存在暂时性死区，即只要块级作用域中存在 let，那么它所声明的变量就绑定了这个区域，不再受外部的影响。
+    let 不允许在相同作用域内，重复声明同一个变量；
+    const 在声明时必须初始化赋值，一旦声明，其声明的值就不允许改变，更不允许重复声明；
+
+ 84、请实现一个 add 函数，满足以下功能
+    add(1);     // 1
+    add(1)(2);      // 3
+    add(1)(2)(3)；  // 6
+    add(1)(2, 3);   // 6
+    add(1, 2)(3);   // 6
+    add(1, 2, 3);   // 6
+
+    function add(){
+      let args = [].slice.call(arguments); // Array.prototype.slice.call(arguments),arguments的call给slice就可以变成数组
+      let fn = function(){
+         let fn_args = [].slice.call(arguments);
+         return add.apply(null,args.concat(fn_args))
+      }
+      fn.toString = function(){
+        return args.reduce((a,b)=&gt;a+b)
+      }
+      return fn;
+    }
+
+    var arr = add(1,2)(3)(4)
+
+85、react-router 里的 &lt;Link&gt; 标签和 &lt;a&gt; 标签有什么区别
+   &lt;Link&gt;是react-router实现路由跳转的连接，一般配合&lt;Route&gt;使用，react-router接管了其默认的链接跳转行为，区别于传统的页面跳转，&lt;Link&gt;的跳转行为只会触发相匹配的&lt;Route&gt;对应的页面内容更新，而不会刷新整个页面
+
+   而&lt;a&gt;标签就是普通的超链接了，用于从当前页面跳转到href指向的另一个页面（非锚点情况）
+
+86、给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
+   你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+   给定 nums = [2, 7, 11, 15], target = 9
+   因为 nums[0] + nums[1] = 2 + 7 = 9
+   所以返回 [0, 1]
+
+   var twoSum = function(nums, target) {
+   const res = []
+    loop:
+    for (let i =0; i&lt;nums.length-1; i++){
+        for (let j = i+1;j&lt;nums.length;j++){
+            if (nums[i]+nums[j]===target){
+                res.push(i,j)
+                break loop
+            }
+        }
+    }
+    return res
+    };
+    let nums =  [2, 7, 11, 15];
+    var num = twoSum(nums,13);
+    console.log(num)
+
+87、在输入框中如何判断输入的是一个正确的网址
+   let url = &apos;https://www.baidu.com&apos;;
+    function searchUrl(url) {
+        try {
+            if (new URL(url) &amp;&amp; (new URL(url).protocol === &quot;http:&quot; || new URL(url).protocol === &quot;https:&quot;) &amp;&amp; url.match(new RegExp(new URL(url).protocol + &quot;//&quot;)).index === 0) return true
+        } catch (err) {
+            console.log(&quot;不是一个正确的网址&quot;);
+        }
+    };
+    console.log(searchUrl(url))
+
+88、实现 convert 方法，把原始 list 转换成树形结构，要求尽可能降低时间复杂度
+   用递归的方式
+   function convert(source,parentId = 0){
+     let trees = [];
+     for(let item of source){
+        if(item.parentId === parentId){
+          let children = convert(source,item.id);
+          if(children.length){
+            item[&apos;children&apos;] = children
+          }
+          trees.push(item)
+        }
+     }
+     return trees;
+   }
+
+89、设计并实现 Promise.race()
+
+90、实现模糊搜索结果的关键词高亮显示
+   let panter = new RegExp(关键词, &apos;g&apos;)
+   该行字符串.replace(panter, &apos;&lt;b style=&quot;color: #2D7BFF&quot;&gt;&apos; + 关键词 + &apos;&lt;/b&gt;&apos;)
+
+91、介绍下 HTTPS 中间人攻击
+    中间人攻击过程如下：
+    a、服务器向客户端发送公钥。
+    b、攻击者截获公钥，保留在自己手上。
+    c、然后攻击者自己生成一个【伪造的】公钥，发给客户端。
+    d、客户端收到伪造的公钥后，生成加密hash值发给服务器。
+    e、攻击者获得加密hash值，用自己的私钥解密获得真秘钥。
+    f、同时生成假的加密hash值，发给服务器。
+    g、服务器用私钥解密获得假秘钥。
+    h、服务器用加秘钥加密传输信息
+    防范方法：
+    服务端在发送浏览器的公钥中加入CA证书，浏览器可以验证CA证书的有效性
+
+92、已知数据格式，实现一个函数 fn 找出链条中所有的父级 id
+   const data = [{
+      id: &quot;1&quot;,
+      name: &quot;test1&quot;,
+      children: [
+        {
+          id: &quot;12&quot;,
+          name: &quot;test12&quot;,
+          children: [
+            {
+              id: &quot;121&quot;,
+              name: &quot;test121&quot;
+            },
+            {
+              id: &quot;122&quot;,
+              name: &quot;test122&quot;
+            }
+          ]
+        },
+        {
+          id: &quot;11&quot;,
+          name: &quot;test11&quot;,
+          children: [
+            {
+              id: &quot;111&quot;,
+              name: &quot;test111&quot;
+            },
+            {
+              id: &quot;112&quot;,
+              name: &quot;test112&quot;
+            }
+          ]
+        },
+
+      ]
+    }];
+
+    function fn (value) {
+      const result = [];
+      const dfs = (source) =&gt; {
+        for (let item of source) {
+          result.push(item);
+          if (item.id === value) {
+            return;
+          } else {
+            const res = dfs(item.children || []);
+            if (!res) return;
+          }
+          console.log(result)
+          result.pop();
+        }
+        return true;
+      };
+      dfs(data);
+      // console.log(result)
+      return result.map(item =&gt; item.id);
+    }
+    fn(&quot;112&quot;) // [&quot;1&quot;, &quot;11&quot;, &quot;112&quot;]
+
+93、给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。请找出这两个有序数组的中位数。要求算法的时间复杂度为 O(log(m+n))
+   var findMedianSortedArrays = function(num1,num2){
+      let num = num1.concat(num2)
+      num = num.sort((a,b)=&gt;{a-b})
+      let mid = Math.floor(num.length)/2;
+      if(num.length%2 == 0){//偶数个数
+        return (num[mid-1]+num[mid])/2
+      }else{
+        return num[mid]
+      }
+   }
+
+94、vue 在 v-for 时给每项元素绑定事件需要用事件代理吗？为什么？
+   不需要，因为vue源码里已经做了处理，之前好像看过vue等框架都自己实现了一套事件,把事件都代理到document上面了,所以不需要自己手动再去代理了,如果不用框架需要代理到父级元素
+
+95、模拟实现一个深拷贝，并考虑对象相互引用以及 Symbol 拷贝的情况
+
+
+96、介绍下前端加密的常见场景和方法
+   使用 PlanA-前端加密、后端解密后计算密码字符串的MD5/MD6存入数据库；也可以PlanB-直接前端使用一种稳定算法加密成唯一值、后端直接将加密结果进行MD5/MD6，全程密码明文不出现在程序中。
+   PlanA：使用 Base64 / Unicode+1 等方式加密成非明文，后端解开之后再存它的 MD5/MD6 
+   PlanB：直接使用 MD5/MD6 之类的方式取 Hash ，让后端存 Hash 的 Hash 。
+
+97、React 和 Vue 的 diff 时间复杂度从 O(n^3) 优化到 O(n) ，那么 O(n^3) 和 O(n) 是如何计算出来的？
+
+98、（京东）写出如下代码的打印结果
+   function changeObjProperty(o) {
+      o.siteUrl = &quot;http://www.baidu.com&quot;
+      o = new Object() // 形参 o 的指向发生改变，指向堆内存中一个新的对象
+      o.siteUrl = &quot;http://www.google.com&quot;
+   } 
+   let webSite = new Object();
+   changeObjProperty(webSite);
+   console.log(webSite.siteUrl);
+
+99、（bilibili）编程算法题
+   用 JavaScript 写一个函数，输入 int 型，返回整数逆序后的字符串。如：输入整型 1234，返回字符串“4321”。要求必须使用递归函数调用，不能用全局变量，输入函数必须只有一个参数传入，必须返回字符串。
+
+   function reverse(bl){
+     var bl = bl.toString().split(&apos;&apos;);
+     var bl2 = bl.reverse();
+     var str = bl2.join(&apos;&apos;).toString()
+     console.log(str);
+     console.log(typeof str)
+   }
+   reverse(1234)
+</code></pre><p>  100、（京东）请写出如下代码的打印结果<br>        function Foo() {<br>            Foo.a = function() {<br>                console.log(1)<br>            }<br>            this.a = function() {<br>                console.log(2)<br>            }<br>        }<br>        Foo.prototype.a = function() {<br>            console.log(3)<br>        }<br>        Foo.a = function() {<br>            console.log(4)<br>        }<br>        Foo.a();  //4<br>        let obj = new Foo();<br>        obj.a();  //2<br>        Foo.a();  //1</p>
+<pre><code>解题分析：
+function Foo() {
+    Foo.a = function() {
+        console.log(1)
+    }
+    this.a = function() {
+        console.log(2)
+    }
+}
+// 以上只是 Foo 的构建方法，没有产生实例，此刻也没有执行
+
+Foo.prototype.a = function() {
+    console.log(3)
+}
+// 现在在 Foo 上挂载了原型方法 a ，方法输出值为 3
+
+Foo.a = function() {
+    console.log(4)
+}
+// 现在在 Foo 上挂载了直接方法 a ，输出值为 4
+
+Foo.a();
+// 立刻执行了 Foo 上的 a 方法，也就是刚刚定义的，所以
+// # 输出 4
+
+let obj = new Foo();
+/* 这里调用了 Foo 的构建方法。Foo 的构建方法主要做了两件事：
+1. 将全局的 Foo 上的直接方法 a 替换为一个输出 1 的方法。
+2. 在新对象上挂载直接方法 a ，输出值为 2。
+*/
+
+obj.a();
+// 因为有直接方法 a ，不需要去访问原型链，所以使用的是构建方法里所定义的 this.a，
+// # 输出 2
+
+Foo.a();
+// 构建方法里已经替换了全局 Foo 上的 a 方法，所以
+// # 输出 1
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/09/02/前端面试100道题/">前端面试100道题</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
+        <p><span>发布时间:</span>2019-09-02, 16:25:18</p>
+        <p><span>最后更新:</span>2019-09-23, 10:24:16</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/09/02/前端面试100道题/" title="前端面试100道题">https://guhaiye.github.io/2019/09/02/前端面试100道题/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/09/02/前端面试100道题/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/08/26/前端开发应知网站/">
+                    前端开发应知网站
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"前端面试100道题　| 海叶的小小园子　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/08/26/前端开发应知网站/" title="下一篇: 前端开发应知网站">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/02/前端面试100道题/">前端面试100道题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/26/前端开发应知网站/">前端开发应知网站</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/10/nginx学习/">nginx学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/nginx502/">nginx502</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/js判断页面是首次被加载还是刷新/">js判断页面是首次被加载还是刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/分页全选反选的实现思路/">iview 分页全选反选的实现思路</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/13/git排除某个文件提交/">git排除某个文件提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/15/实现换主题-皮肤功能/">vue 实现换主题/皮肤功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/23/跨域iframe通信/">跨域iframe通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/‘用户和用户组/">用户和用户组</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/pwd/">每天一个linux命令之 pwd</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/mv/">每天一个linux命令之 mv</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/tar/">每天一个linux命令之 tar</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/cp/">每天一个linux命令之  cp</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/13/blogtheme/">安装好自己的博客，想要更改主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/myfirstblog/">使用Hexo+Github一步步搭建属于自己的博客（基础）</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 guhaiye
+            </div>
+            <div class="footer-right">
+               <!--
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE 
+               -->
+                <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>
