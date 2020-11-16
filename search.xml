@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA['npm自定义组件打包发布过程']]></title>
+    <url>%2F2020%2F11%2F16%2Fnpm%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[1、到npm官网(https://www.npmjs.com/)注册账号2、然后在cmd中执行登录命令：npm login 然后输入用户名，回车输入密码，回车输入邮件，回车新建一个文件夹，然后cd到这个文件夹3.1 在cmd中执行npm init依次按要求填好项目名称（name）、版本(version)、描述(descrition)（注意：取名字的时候，最好把你想取的名字到npm官网查查看有没有相同或者类似的包，不然发布的时候会一直提示你改的） 3.2 然后新建index.js入口文件，以及readme.md文件3.3 然后执行发布命令npm publish（如果没登录会出现以下提示:) 所以要执行npm login进行登录，登录完成后再执行发布命令：npm publish，结果又报错了：403 Forbidden - PUT http://registry.cnpmjs.org/nodetest11 - [no_perms] Private mode enable, only admin can publish this module 经过查询资料得知,我们登录的时候登的是cnpm！可以输入以下命令查看当前的登录源：npm config get registry 输入以下命令切回npmjs源：npm config set registry=http://registry.npmjs.org切换回来后需要再次登录，登录成功执行发布命令，哎呀 还是报错了：（注意：发布的时候360会弹窗阻止访问，记得点允许！）403 Forbidden - PUT http://registry.npmjs.org/nodetest11 - Package name too similar to existing packages; try renaming your package to ‘@liucfang/nodetest11’ and publishing with ‘npm publish –access=public’ instead 说是名字太相似了，要求改个名字，并且使用npm publish –access=public 发布好吧，那就改名字呗！尝试改了个带大写字母的名字，发布的时候果然报错了！如下： 所以包的名字不能包含大写字母？那就改成小写试试：哎呀妈，还是报错了，坑还真不少呢： 提示要核实邮箱，因为刚注册成功后，npm会往你注册的邮箱里发一个邮件，用来验证你的邮箱是否正确可用，所以要打开邮件核实，唉，漏了一步都不行呢！那就登录邮箱核实呗。 核实完后再次执行发布命令：npm publish –access=public好家伙，终于发布成功了：到npmjs官网查下看有没有，有了，完美！tip：发布完后可以新建一个项目（或在已有项目中安装使用），然后通过npm install nodecc11 下载该安装包，引入：var getSum = require(‘nodecc11’); 就可以调用getSum 进行求和啦！]]></content>
+      <tags>
+        <tag>IT技术</tag>
+        <tag>前端</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[iview和il8n不兼容的问题]]></title>
     <url>%2F2019%2F11%2F14%2Fiview%E5%92%8Cil8n%E4%B8%8D%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[Vue.use(iview, { i18n: (key,value)=&gt; { let val = i18n.t(key, value); if (val !== null &amp;&amp; val !== undefined) return value; return ‘’; }})]]></content>
