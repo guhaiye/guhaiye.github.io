@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="海叶的小小园子">
 <meta property="og:description" content="前端面试100道题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-09T07:56:58.133Z">
+<meta property="og:updated_time" content="2019-11-18T09:19:40.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试100道题">
 <meta name="twitter:description" content="前端面试100道题">
@@ -591,7 +591,7 @@ undefined
      reason =&gt; p.resolve(callback()).then(() =&gt; {throw reason})
   );
 }
-</code></pre><p> 65、a.b.c.d 和 a[‘b’][‘c’][‘d’]，哪个性能更高？<br>    前一个比后一个性能高一些</p>
+</code></pre><p> 65、a.b.c.d 和 a[‘b’][‘c’][‘d’]，哪个性能更高？<br>    前一个比后一个性能高一些：后者还要考虑 [ ] 中是变量的情况，再者，从两种形式的结构来看，显然编译器解析前者要比后者容易些，自然也就快一点。</p>
 <p> 66、ES6 代码转成 ES5 代码的实现思路是什么<br>    题目说的是ES6,所以不考虑.jsx,.ts这类js扩展语言<br>    ES6转ES5目前行业标配是Babel,转换的大致流程如下：<br>    a、解析：解析代码字符串，生成AST<br>    b、转换：将一定的规则转换，修改AST<br>    c、生成：将修改后的AST转换成普通代码</p>
 <p> 67、随机生成一个长度为 10 的整数类型的数组，例如 [2, 10, 3, 4, 5, 11, 10, 11, 20]，将其排列成一个新数组，要求新数组形式如下，例如 [[2, 3, 4, 5], [10, 11], [20]]。<br>    //随机生成长度为10的数组<br>    function randomNumber(len) {<br>        const max = 20;<br>        const arr = [];<br>        for (let i = 0; i &lt; len; i++) {<br>            arr.push(Math.floor(Math.random() * max));<br>        }</p>
 <pre><code>    const sorted = [...new Set(arr)].sort((a, b) =&gt; a - b); // 去重排序
@@ -817,7 +817,7 @@ console.log(sort(res));
          return add.apply(null,args.concat(fn_args))
       }
       fn.toString = function(){
-        return args.reduce((a,b)=&gt;a+b)
+        return args.reduce((a,b)=&gt;a+b)  //方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值
       }
       return fn;
     }
@@ -1053,7 +1053,7 @@ Foo.a();
         <p><span>本文标题:</span><a href="/2019/09/02/前端面试100道题/">前端面试100道题</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">guhaiye</a></p>
         <p><span>发布时间:</span>2019-09-02, 16:25:18</p>
-        <p><span>最后更新:</span>2019-10-09, 15:56:58</p>
+        <p><span>最后更新:</span>2019-11-18, 17:19:40</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/09/02/前端面试100道题/" title="前端面试100道题">https://guhaiye.github.io/2019/09/02/前端面试100道题/</a>
             <span class="copy-path" data-clipboard-text="原文: https://guhaiye.github.io/2019/09/02/前端面试100道题/　　作者: guhaiye" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -1173,7 +1173,7 @@ Foo.a();
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2019 guhaiye
+                2016-2020 guhaiye
             </div>
             <div class="footer-right">
                <!--
