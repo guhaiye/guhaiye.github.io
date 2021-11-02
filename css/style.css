@@ -888,7 +888,7 @@ a {
   background-position: 50% 100%;
 }
 #header .header-nav .social .CodePen {
-  background: url("//cdn.bootcss.com/logos/0.2.0/codepen-icon.svg") no-repeat #000;
+  background: url("//cdnjs.cloudflare.com/ajax/libs/logos/0.2.0/codepen-icon.svg") no-repeat #000;
   -webkit-background-size: 70%;
   -moz-background-size: 70%;
   background-size: 70%;
